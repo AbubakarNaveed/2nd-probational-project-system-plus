@@ -11,7 +11,9 @@ const AuthPage = () => {
             <Outlet />
           </div>
 
-          <div className="col-7"> slider</div>
+          <div className="col-7">
+            <div style={{}}></div>
+          </div>
         </div>
       </div>
     </div>

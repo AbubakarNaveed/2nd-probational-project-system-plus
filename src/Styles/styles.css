@@ -12057,6 +12057,7 @@ textarea.form-control-lg {
 }
 .loginUtility .forgot a {
   line-height: 18px;
+  text-decoration: none;
   font-size: 14px;
   font-weight: 400;
   color: #bf3947 !important;
@@ -12072,6 +12073,7 @@ textarea.form-control-lg {
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
+  max-width: 450px;
 }
 
 .loginUtility2 {
@@ -12090,6 +12092,7 @@ textarea.form-control-lg {
 }
 .loginUtility2 a {
   line-height: 18px;
+  text-decoration: none;
   font-size: 14px;
   font-weight: 400;
   color: #bf3947 !important;

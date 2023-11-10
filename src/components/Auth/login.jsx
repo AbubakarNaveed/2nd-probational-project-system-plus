@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div className="loginWrapper row">
@@ -38,7 +38,9 @@ const Login = () => {
             <p>Remember me </p>
           </div>
           <div className="forgot">
-            <a>Forgot Password?</a>
+            <a>
+              <Link to="/forgotpassword">Forgot Password?</Link>
+            </a>
           </div>
         </div>
         <div className="loginButton">
@@ -48,7 +50,9 @@ const Login = () => {
         </div>
         <div className="loginUtility2">
           <p>Don't have any?</p>
-          <a>Create a free account</a>
+          <a>
+            <Link to="/signup">Create a free account</Link>
+          </a>
         </div>
       </div>
     </div>
