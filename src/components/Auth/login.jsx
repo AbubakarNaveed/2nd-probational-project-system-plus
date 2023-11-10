@@ -4,13 +4,9 @@ const Login = () => {
   return (
     <div className="loginWrapper row">
       <div className="loginHeader col-12 ">
-        <div className="loginHeading">
-          <h1>Welcome to Pathsync</h1>
-          <h1>👋</h1>
-        </div>
-        <div className="loginMain">
-          <p>Please login in order to proceed with you account.</p>
-        </div>
+        <h1>Hi, Nice to Meet You! 👋</h1>
+
+        <p>Please login in order to proceed with you account. </p>
       </div>
       <div className="loginBody col-12">
         <form>

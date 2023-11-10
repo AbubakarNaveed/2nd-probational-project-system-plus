@@ -11980,7 +11980,6 @@ textarea.form-control-lg {
 .authPageWrapper {
   width: 100%;
   height: 100vh;
-  padding: 136px 148px;
 }
 
 .authCardWrapper {
@@ -11991,6 +11990,7 @@ textarea.form-control-lg {
 .loginWrapper {
   display: flex;
   flex-direction: column;
+  max-width: 380px;
   justify-content: center;
   gap: 64px;
 }
@@ -12001,19 +12001,15 @@ textarea.form-control-lg {
   align-items: start;
   gap: 12px;
 }
-.loginHeader .loginHeading {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-}
-.loginHeader .loginHeading h1, .loginHeader .loginHeading .h1 {
+.loginHeader h1, .loginHeader .h1 {
   font-size: 28px;
   color: #292b33;
   font-weight: 700;
   word-wrap: break-word;
   line-height: 37px;
 }
-.loginHeader .loginMain p {
+.loginHeader p {
+  margin: 0;
   font-size: 14px;
   color: #545766;
   font-weight: 400;
@@ -12022,6 +12018,9 @@ textarea.form-control-lg {
   text-align: center;
 }
 
+.loginBody {
+  max-width: 450px;
+}
 .loginBody form > :nth-child(1) {
   margin-bottom: 12px;
 }
@@ -12097,6 +12096,73 @@ textarea.form-control-lg {
   font-weight: 400;
   color: #bf3947 !important;
   word-wrap: break-word;
+}
+
+.signUpWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 52px;
+  max-width: 380px;
+}
+
+.signUpHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+}
+.signUpHeader h1, .signUpHeader .h1 {
+  font-size: 28px;
+  color: #292b33;
+  font-weight: 700;
+  word-wrap: break-word;
+  line-height: 37px;
+}
+.signUpHeader p {
+  margin: 0;
+  font-size: 14px;
+  color: #545766;
+  font-weight: 400;
+  line-height: 18px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.signUpBody form div {
+  margin-bottom: 12px;
+}
+.signUpBody form div label {
+  font-size: 18px;
+  color: #292b33;
+  line-height: 22px;
+  font-weight: 500;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+}
+.signUpBody form > :nth-child(5) {
+  margin-bottom: 0 !important;
+}
+
+.signUpUtility {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.signUpUtility input {
+  margin-right: 8px;
+}
+.signUpUtility p {
+  line-height: 18px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #292b33 !important;
+  word-wrap: break-word;
+}
+.signUpUtility p span {
+  color: #bf3947;
 }
 
 body {

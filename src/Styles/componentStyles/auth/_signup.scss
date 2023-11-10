@@ -1,0 +1,54 @@
+.signUpWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 52px;
+  max-width: 380px;
+}
+
+.signUpHeader {
+  @include HeaderWrapper();
+  h1 {
+    @include headerText();
+  }
+
+  p {
+    margin: 0;
+    @include cardText();
+  }
+}
+
+.signUpBody {
+  form {
+    div {
+      margin-bottom: 12px;
+      label {
+        @include cardInputLabel();
+        margin-bottom: 12px;
+      }
+    }
+
+    & > :nth-child(5) {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.signUpUtility {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  input {
+    margin-right: 8px;
+  }
+  p {
+    line-height: 18px;
+    margin: 0;
+    @include utilityText($authCardHeading);
+    span {
+      color: $primary;
+    }
+  }
+}

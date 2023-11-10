@@ -29,3 +29,10 @@
   color: $color !important;
   word-wrap: break-word;
 }
+
+@mixin HeaderWrapper() {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+}
