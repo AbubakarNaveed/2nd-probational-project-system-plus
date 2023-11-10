@@ -1,2 +1,10 @@
 @import "./theme/customBootstrap";
 @import "./theme/color";
+@import "./theme/typography";
+@import "./pageStyles";
+@import "./componentStyles";
+
+body {
+  background-color: $bgColor !important;
+  font-family: $font-family !important;
+}

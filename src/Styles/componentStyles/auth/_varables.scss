@@ -1,0 +1,31 @@
+@mixin headerText() {
+  font-size: $font-auth-lg;
+  color: $authCardHeading;
+  font-weight: $font-weight-700;
+  word-wrap: break-word;
+  line-height: 37px;
+}
+
+@mixin cardText() {
+  font-size: $font-auth-sm;
+  color: $authCardMain;
+  font-weight: $font_weight-400;
+  line-height: 18px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+@mixin cardInputLabel() {
+  font-size: $font-auth-md;
+  color: $authCardHeading;
+  line-height: 22px;
+  font-weight: $font-weight-500;
+  word-wrap: break-word;
+}
+
+@mixin utilityText($color) {
+  font-size: $font-auth-sm;
+  font-weight: $font-weight-400;
+  color: $color !important;
+  word-wrap: break-word;
+}

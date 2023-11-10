@@ -1,3 +1,10 @@
-$primary: red;
+//colors
+$primary: #bf3947;
+
+//spacings
+$input-padding-x-lg: 12px;
+
+$btn-padding-y: 14px;
+$btn-padding-x: 16px;
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@images/*": ["./src/assets/images/*"],
+      "@fonts/*": ["./src/assets/fonts/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@user/*": ["./src/pages/User/*"],
+      "@admin/*": ["./src/pages/Admin/*"],
+      "@settings/*": ["./src/pages/Settings/*"],
+      "@auth/*": ["./src/pages/Authentication/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@graphql/*": ["./src/utils/graphql/*"],
+      "@hooks/*": ["./src/utils/hooks/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@middleware/*": ["./src/middleware/*"],
+      "@services/*": ["./src/services/*"],
+      "@routes/*": ["./src/routes/*"],
+      "@store/*": ["./src/store/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

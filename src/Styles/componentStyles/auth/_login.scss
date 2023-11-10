@@ -1,0 +1,95 @@
+@import "./varables";
+
+.loginWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 64px;
+}
+
+.loginHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+
+  .loginHeading {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    h1 {
+      @include headerText();
+    }
+  }
+  .loginMain {
+    p {
+      @include cardText();
+    }
+  }
+}
+
+.loginBody {
+  form {
+    & > :nth-child(1) {
+      margin-bottom: 12px;
+    }
+    div {
+      max-width: 450px;
+      label {
+        @include cardInputLabel();
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+.loginUtility {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .remember {
+    display: flex;
+    gap: 8px;
+    height: 18px;
+    p {
+      line-height: 18px;
+      @include utilityText($authCardHeading);
+    }
+  }
+  .forgot {
+    a {
+      line-height: 18px;
+      @include utilityText($primary);
+    }
+  }
+}
+.loginButton {
+  width: 100%;
+  margin: 24px 0;
+  button {
+    width: 100%;
+    font-weight: $font-weight-600;
+    font-size: $font-auth-md;
+    line-height: 22px;
+  }
+}
+
+.loginUtility2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3px;
+
+  p {
+    line-height: 18px;
+    margin: 0;
+    @include utilityText($authCardMain);
+  }
+
+  a {
+    line-height: 18px;
+    @include utilityText($primary);
+  }
+}
