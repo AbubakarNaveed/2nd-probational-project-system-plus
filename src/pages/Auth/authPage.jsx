@@ -8,19 +8,23 @@ const AuthPage = () => {
   return (
     <div className="container-lg">
       <div
-        className="authPageWrapper"
+        className="authPageWrapper row"
         style={{
-          padding: `${location.pathname === "/signup" ? "110px" : "136px"} 0px`,
+          padding: `${
+            location.pathname === "/signup" ? "110px" : "136px"
+          } 50px`,
         }}
       >
         <img
           src={Logo}
           style={{
             marginBottom: location.pathname === "/signup" ? "52px" : null,
+            width: "147px",
+            height: "18px",
           }}
         />
         <div className="authCardWrapper row">
-          <div className=" col-5 ">
+          <div className="col-5">
             <Outlet />
           </div>
 

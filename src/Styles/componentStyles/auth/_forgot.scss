@@ -1,0 +1,12 @@
+.forgotUtility2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    line-height: 18px;
+    text-decoration: none;
+    @include utilityText($primary);
+    font-size: $font-auth-md;
+  }
+}

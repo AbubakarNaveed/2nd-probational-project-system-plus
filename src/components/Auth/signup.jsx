@@ -14,7 +14,7 @@ const Signup = () => {
           <div class="form-group input-group-lg">
             <label>Full Name *</label>
             <input
-              type="email"
+              type="text"
               class="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"

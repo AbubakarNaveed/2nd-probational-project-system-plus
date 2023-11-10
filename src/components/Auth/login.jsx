@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Login = () => {
   return (
-    <div className="loginWrapper row">
+    <div className="loginWrapper row h-100 align-items-center w-100 justify-content-center ">
       <div className="loginHeader col-12 ">
         <h1>Hi, Nice to Meet You! 👋</h1>
 
