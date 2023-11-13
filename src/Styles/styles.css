@@ -11982,14 +11982,10 @@ textarea.form-control-lg {
   height: 100vh;
 }
 
-.authCardWrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
 .loginWrapper {
   display: flex;
   flex-direction: column;
+  height: 100%;
   max-width: 380px;
   justify-content: center;
   gap: 64px;
@@ -12181,6 +12177,89 @@ textarea.form-control-lg {
   color: #bf3947 !important;
   word-wrap: break-word;
   font-size: 18px;
+}
+
+.carouselBody {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #edeef2;
+  padding: 36px 61px;
+  border-radius: 16px;
+  position: relative;
+  z-index: -1;
+}
+.carouselBody .circleContainer {
+  z-index: 0;
+  position: absolute;
+  padding: 36px 61px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.carouselBody .circleContainer .circle {
+  width: 75%;
+  height: 70%;
+  opacity: 0.3;
+  background-color: #dcdee6;
+  border-radius: 9999px;
+}
+
+.imgContainer {
+  width: 100% !important;
+  margin-right: 120px;
+  margin-top: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.captionContainer {
+  display: flex;
+  flex-direction: column;
+  height: 90px;
+  padding: 0px 50px;
+  margin: auto 0;
+  align-items: center;
+  text-align: center;
+}
+.captionContainer h1, .captionContainer .h1 {
+  font-size: 23px;
+  color: #18181b;
+  word-wrap: break-word;
+  font-weight: 700;
+}
+.captionContainer p {
+  font-size: 18px;
+  color: #71717a;
+  word-wrap: break-word;
+  font-weight: 400;
+}
+
+.carouselContainer {
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-indicators {
+  bottom: -40px !important;
+}
+.carousel-indicators button {
+  background-color: #838799 !important;
+  border: 0px !important;
+  width: 9px !important;
+  height: 9px !important;
+  border-radius: 999px !important;
 }
 
 body {
