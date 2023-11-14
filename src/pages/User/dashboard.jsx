@@ -2,11 +2,13 @@ import React from "react";
 import Sidebar from "@components/Dashboard/sidebar";
 const Dashboard = () => {
   return (
-    <div className="row gap-0">
-      <div className="col-2">
-        <Sidebar />
+    <div style={{ height: "100vh", overflowX: "hidden" }}>
+      <div className="row custom-gutter">
+        <div className="col-2 p-0">
+          <Sidebar />
+        </div>
+        <div className="col-10 bg-info">Main</div>
       </div>
-      <div className="col-10 bg-info m-0">Main</div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
-import Img1 from "../../../assets/images/slide1.png";
-import Img2 from "../../../assets/images/slide2.png";
-import Img3 from "../../../assets/images/slide3.png";
+import Img1 from "@images/slide1.png";
+import Img2 from "@images/slide2.png";
+import Img3 from "@images/slide3.png";
 
 export const carousalData = [
   {

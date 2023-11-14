@@ -1,7 +1,5 @@
 import React from "react";
-import Img1 from "../../../assets/images/slide1_img1.png";
-import Img2 from "../../../assets/images/slide1_img2.png";
-const slide1 = ({ text, heading, ...props }) => {
+const Slide = ({ text, heading, ...props }) => {
   return (
     <div
       style={{
@@ -39,4 +37,4 @@ const slide1 = ({ text, heading, ...props }) => {
   );
 };
 
-export default slide1;
+export default Slide;

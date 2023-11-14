@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Input from "@components/Generals/input";
+import Button from "@components/Generals/button";
 const Login = () => {
   return (
     <div className="loginWrapper row h-100 align-items-center w-100 justify-content-center ">
@@ -43,9 +44,10 @@ const Login = () => {
           </div>
         </div>
         <div className="loginButton">
-          <button class="btn btn-primary" type="button">
+          {/* <button class="btn btn-primary" type="button">
             Login
-          </button>
+          </button> */}
+          <Button text={"Login"} />
         </div>
         <div className="loginUtility2">
           <p>Don't have any?</p>

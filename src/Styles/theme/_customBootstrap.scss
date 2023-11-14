@@ -1,10 +1,19 @@
 //colors
 $primary: #bf3947;
-
+$secondary: #dcdee6;
 //spacings
 $input-padding-x-lg: 12px;
 
 $btn-padding-y: 14px;
 $btn-padding-x: 16px;
+
+.row {
+  --bs-gutter-x: 0;
+}
+
+.row.custom-gutter {
+  margin-left: 0; // Use the negative margin to compensate for padding
+  margin-right: 0; // Use the negative margin to compensate for padding
+}
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
