@@ -67,7 +67,7 @@ const Signup = () => {
         <div className="loginUtility2">
           <p>Already have an account?</p>
           <a>
-            <Link to="/">Login here</Link>
+            <Link to="/login">Login here</Link>
           </a>
         </div>
       </div>

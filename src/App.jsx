@@ -4,17 +4,18 @@ import {
   RouterProvider,
   Navigate,
 } from "react-router-dom";
+import "./Styles/styles.css";
 import AuthPage from "@pages/Auth/authPage";
 import AdminAuth from "@pages/Auth/adminAuth";
 import Login from "@components/Auth/login";
 import Signup from "@components/Auth/signup";
 import ForgotPassword from "@components/Auth/forgotPassword";
-import "./Styles/styles.css";
+
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Navigate to="/login" />,
+      element: <Navigate to="/signup" />,
     },
     {
       path: "/",

@@ -19,8 +19,7 @@ const slide1 = ({ text, heading, ...props }) => {
           src={props.img1}
           style={{
             borderRadius: "8px",
-            width: "450px",
-            height: "250px",
+
             objectFit: "contain",
           }}
         />
@@ -29,8 +28,7 @@ const slide1 = ({ text, heading, ...props }) => {
           style={{
             borderRadius: "8px",
             translate: "70px -120px",
-            width: "450px",
-            height: "250px",
+
             objectFit: "contain",
           }}
         />
