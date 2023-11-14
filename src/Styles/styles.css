@@ -12191,28 +12191,9 @@ textarea.form-control-lg {
   position: relative;
   z-index: -1;
 }
-.carouselBody .circleContainer {
-  z-index: 0;
-  position: absolute;
-  padding: 36px 61px;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-.carouselBody .circleContainer .circle {
-  width: 75%;
-  height: 70%;
-  opacity: 0.3;
-  background-color: #dcdee6;
-  border-radius: 9999px;
-}
 
 .imgContainer {
   width: 100% !important;
-  margin-right: 120px;
-  margin-top: 20px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -12220,8 +12201,8 @@ textarea.form-control-lg {
   align-items: center;
 }
 .imgContainer img {
-  width: 450px;
-  height: 250px;
+  width: 100%;
+  height: 90%;
 }
 
 .captionContainer {

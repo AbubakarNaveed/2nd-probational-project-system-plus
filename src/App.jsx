@@ -10,7 +10,7 @@ import AdminAuth from "@pages/Auth/adminAuth";
 import Login from "@components/Auth/login";
 import Signup from "@components/Auth/signup";
 import ForgotPassword from "@components/Auth/forgotPassword";
-
+import Dashboard from "@pages/User/dashboard";
 function App() {
   const router = createBrowserRouter([
     {
@@ -29,6 +29,10 @@ function App() {
     {
       path: "/admin",
       element: <AdminAuth />,
+    },
+    {
+      path: "/dashboard",
+      element: <Dashboard />,
     },
   ]);
 

@@ -6,9 +6,9 @@ const CarouselComponent = () => {
   return (
     //
     <div className="carouselBody">
-      <div className="circleContainer">
+      {/* <div className="circleContainer">
         <div className="circle"></div>
-      </div>
+      </div> */}
       <div className="carouselContainer">
         <Carousel controls={false} style={{ height: "100%", width: "100%" }}>
           {carousalData.map((slide) => (

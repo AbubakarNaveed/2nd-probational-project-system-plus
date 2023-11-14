@@ -16,14 +16,12 @@ const slide1 = ({ text, heading, ...props }) => {
     >
       <div className="imgContainer">
         <img
-          src={props.img1}
+          src={props.img}
           style={{
-            borderRadius: "8px",
-
             objectFit: "contain",
           }}
         />
-        <img
+        {/* <img
           src={props.img2}
           style={{
             borderRadius: "8px",
@@ -31,7 +29,7 @@ const slide1 = ({ text, heading, ...props }) => {
 
             objectFit: "contain",
           }}
-        />
+        /> */}
       </div>
       <div className="captionContainer">
         <h1>{heading}</h1>
