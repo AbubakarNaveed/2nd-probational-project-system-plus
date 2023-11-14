@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Input from "@components/Generals/input";
 const Login = () => {
   return (
     <div className="loginWrapper row h-100 align-items-center w-100 justify-content-center ">
@@ -10,7 +11,7 @@ const Login = () => {
       </div>
       <div className="loginBody col-12">
         <form>
-          <div class="form-group input-group-lg ">
+          {/* <div class="form-group input-group-lg ">
             <label>Email*</label>
             <input
               type="email"
@@ -26,7 +27,9 @@ const Login = () => {
               class="form-control"
               id="exampleInputPassword1"
             />
-          </div>
+          </div> */}
+          <Input label={"Email *"} type={"email"} />
+          <Input label={"Password *"} type={"password"} />
         </form>
         <div className="loginUtility">
           <div className="remember">

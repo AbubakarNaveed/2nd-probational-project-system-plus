@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "@images/logo.png";
 import Key1 from "@images/Key.svg";
 import Key2 from "@images/Key2.svg";
+import Input from "@components/Generals/input";
 import { Link } from "react-router-dom";
 const adminAuth = () => {
   return (
@@ -50,23 +51,8 @@ const adminAuth = () => {
                 </div>
                 <div className="loginBody">
                   <form>
-                    <div class="form-group input-group-lg ">
-                      <label>Email*</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="exampleInputEmail1"
-                        aria-describedby="emailHelp"
-                      />
-                    </div>
-                    <div class="form-group input-group-lg">
-                      <label>Password*</label>
-                      <input
-                        type="password"
-                        class="form-control"
-                        id="exampleInputPassword1"
-                      />
-                    </div>
+                    <Input label={"Email *"} type={"email"} />
+                    <Input label={"Password *"} type={"password"} />
                   </form>
                   <div className="loginUtility">
                     <div className="remember">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Input from "@components/Generals/input";
 const ForgotPassword = () => {
   return (
     <div className="signUpWrapper row">
@@ -12,7 +13,7 @@ const ForgotPassword = () => {
       </div>
       <div className="signUpBody col-12">
         <form>
-          <div class="form-group input-group-lg">
+          {/* <div class="form-group input-group-lg">
             <label>Email *</label>
             <input
               type="text"
@@ -20,7 +21,8 @@ const ForgotPassword = () => {
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
             />
-          </div>
+          </div> */}
+          <Input type={"text"} label={"Email *"} />
         </form>
         <div className="loginButton">
           <button class="btn btn-primary" type="button">

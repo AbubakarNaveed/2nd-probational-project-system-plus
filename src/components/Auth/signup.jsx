@@ -1,4 +1,32 @@
 import React from "react";
+import Input from "@components/Generals/input";
+const signUpFormsCreditionals = [
+  {
+    id: 1,
+    label: "Full Name *",
+    type: "text",
+  },
+  {
+    id: 2,
+    label: "Email *",
+    type: "text",
+  },
+  {
+    id: 3,
+    label: "Phone Number *",
+    type: "text",
+  },
+  {
+    id: 4,
+    label: "Password *",
+    type: "password",
+  },
+  {
+    id: 5,
+    label: "Confirm Password *",
+    type: "password",
+  },
+];
 import { Link } from "react-router-dom";
 const Signup = () => {
   return (
@@ -11,7 +39,7 @@ const Signup = () => {
       </div>
       <div className="signUpBody col-12">
         <form>
-          <div class="form-group input-group-lg">
+          {/* <div class="form-group input-group-lg">
             <label>Full Name *</label>
             <input
               type="text"
@@ -51,7 +79,10 @@ const Signup = () => {
               class="form-control"
               id="exampleInputPassword1"
             />
-          </div>
+          </div> */}
+          {signUpFormsCreditionals.map((item) => (
+            <Input key={item.id} {...item} />
+          ))}
         </form>
         <div className="signUpUtility">
           <input type="checkbox" />
