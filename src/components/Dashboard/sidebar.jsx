@@ -79,7 +79,7 @@ const sidebar = () => {
                   return (
                     <a
                       key={link.id}
-                      className={link.id === activeLink ? "active" : ""}
+                      className={link.id === activeLink ? "activeAnchor" : ""}
                       onClick={() => handleLinkClick(link.id)}
                     >
                       <img src={link.icon} />
@@ -93,7 +93,7 @@ const sidebar = () => {
                   return (
                     <a
                       key={link.id}
-                      className={link.id === activeLink ? "active" : ""}
+                      className={link.id === activeLink ? "activeAnchor" : ""}
                       onClick={() => handleLinkClick(link.id)}
                     >
                       <img src={link.icon} />
@@ -110,7 +110,7 @@ const sidebar = () => {
               {linksData["User"].map((link) => (
                 <a
                   key={link.id}
-                  className={link.id === activeLink ? "active" : ""}
+                  className={link.id === activeLink ? "activeAnchor" : ""}
                   onClick={() => handleLinkClick(link.id)}
                 >
                   <img src={link.icon} />

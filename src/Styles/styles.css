@@ -12335,13 +12335,13 @@ textarea.form-control-lg {
   margin: 0;
 }
 
-.active {
+.activeAnchor {
   background-color: #fbf2f3 !important;
 }
-.active img {
+.activeAnchor img {
   filter: invert(23%) sepia(33%) saturate(4947%) hue-rotate(335deg) brightness(97%) contrast(78%);
 }
-.active p {
+.activeAnchor p {
   font-weight: 500;
   letter-spacing: 0.32px;
   color: #bf3947 !important;
