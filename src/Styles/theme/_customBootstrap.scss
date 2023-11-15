@@ -17,3 +17,8 @@ $btn-border-radius: 8px;
 }
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.row > div {
+  padding-right: 0;
+  padding-left: 0;
+}

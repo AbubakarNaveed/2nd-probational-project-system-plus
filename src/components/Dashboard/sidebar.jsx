@@ -20,6 +20,7 @@ const sidebar = () => {
         width: "100%",
         overflowY: "auto",
         padding: "24px 16px",
+        borderRight: "1px solid #dcdee6",
         background: "red",
         display: "flex",
         flexDirection: "column",

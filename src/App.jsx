@@ -11,6 +11,7 @@ import Login from "@components/Auth/login";
 import Signup from "@components/Auth/signup";
 import ForgotPassword from "@components/Auth/forgotPassword";
 import Dashboard from "@pages/User/dashboard";
+import DefaultScreen from "@components/Dashboard/Main/DefaultScreen";
 function App() {
   const router = createBrowserRouter([
     {
@@ -33,6 +34,19 @@ function App() {
     {
       path: "/dashboard",
       element: <Dashboard />,
+      children: [
+        {
+          path: "",
+          element: <DefaultScreen />,
+        },
+      ],
+      // children: [
+      //   {
+      //     path: "account",
+      //     element: <AccountSetting />,
+      //     children: [{ path: "change", element: <Change /> }],
+      //   },
+      // ],
     },
   ]);
 
