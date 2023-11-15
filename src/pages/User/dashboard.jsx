@@ -2,8 +2,8 @@ import React from "react";
 import Sidebar from "@components/Dashboard/sidebar";
 const Dashboard = () => {
   return (
-    <div style={{ height: "100vh", overflowX: "hidden" }}>
-      <div className="row custom-gutter">
+    <div style={{ height: "100vh", overflowX: "hidden", width: "100%" }}>
+      <div className="row custom-gutter w-100">
         <div className="col-2 p-0">
           <Sidebar />
         </div>

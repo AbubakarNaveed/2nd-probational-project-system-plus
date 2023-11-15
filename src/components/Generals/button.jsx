@@ -11,7 +11,7 @@ const Button = ({ icon = "none", text, color, type, size = "18" }) => {
       {icon != "none" && (
         <span
           aria-hidden="true"
-          style={{ marginRight: "8px", marginBottom: "1px" }}
+          style={{ marginRight: "8px", marginBottom: "2px" }}
         >
           <img src={icon} style={{ height: "20px", width: "20px" }} />
         </span>
