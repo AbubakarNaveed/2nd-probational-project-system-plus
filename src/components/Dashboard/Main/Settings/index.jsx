@@ -1,9 +1,30 @@
 import React from "react";
-
+import { Outlet, NavLink } from "react-router-dom";
 const index = () => {
   return (
-    <div style={{ background: "#fff", width: "100%" }}>
-      <p>This is account settings</p>
+    <div className="mainContainer">
+      <div className="headerWithNavs">
+        <h1>Settings</h1>
+        <div>
+          <NavLink
+            to={"account"}
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "navLinkActive" : ""
+            }
+          >
+            Account
+          </NavLink>
+
+          <NavLink
+            to={"password"}
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "navLinkActive" : ""
+            }
+          >
+            Password
+          </NavLink>
+        </div>
+      </div>
       <Outlet />
     </div>
   );

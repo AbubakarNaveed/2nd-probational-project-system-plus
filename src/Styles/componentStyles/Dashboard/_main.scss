@@ -12,6 +12,38 @@
       margin: 0px;
     }
   }
+  .headerWithNavs {
+    padding: 24px 24px 0 24px;
+    display: flex;
+    border-bottom: 1px solid $gray1;
+
+    flex-direction: column;
+    position: relative;
+    gap: 12px;
+    h1 {
+      font-size: $font-extra-large;
+      font-weight: $font-weight-800;
+      margin: 0px;
+    }
+    div {
+      padding-bottom: 12px;
+      a {
+        padding: 12px !important;
+        text-decoration: none;
+        font-weight: $font-weight-400;
+        font-size: $font-medium;
+        color: $gray4;
+        word-wrap: break-word;
+        // border-bottom: 2px solid $primary;
+      }
+    }
+  }
+}
+
+.navLinkActive {
+  font-weight: $font-weight-500 !important;
+  color: $authCardHeading !important;
+  border-bottom: 2px solid $primary;
 }
 
 .defaultScreenTextContainer {

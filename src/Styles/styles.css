@@ -12357,6 +12357,36 @@ textarea.form-control-lg {
   font-weight: 800;
   margin: 0px;
 }
+.mainContainer .headerWithNavs {
+  padding: 24px 24px 0 24px;
+  display: flex;
+  border-bottom: 1px solid #edeef2;
+  flex-direction: column;
+  position: relative;
+  gap: 12px;
+}
+.mainContainer .headerWithNavs h1, .mainContainer .headerWithNavs .h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0px;
+}
+.mainContainer .headerWithNavs div {
+  padding-bottom: 12px;
+}
+.mainContainer .headerWithNavs div a {
+  padding: 12px !important;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: #6b6f80;
+  word-wrap: break-word;
+}
+
+.navLinkActive {
+  font-weight: 500 !important;
+  color: #292b33 !important;
+  border-bottom: 2px solid #bf3947;
+}
 
 .defaultScreenTextContainer {
   display: flex;

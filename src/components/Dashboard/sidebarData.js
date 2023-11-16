@@ -29,5 +29,12 @@ export const linksData = {
     { id: 8, text: "Drivers", icon: Driver },
     { id: 9, text: "Vehicles", icon: Vehicles },
   ],
-  User: [{ id: 10, text: "Settings", icon: Settings }],
+  User: [
+    {
+      id: 10,
+      text: "Settings",
+      icon: Settings,
+      path: "/dashboard/settings/account",
+    },
+  ],
 };

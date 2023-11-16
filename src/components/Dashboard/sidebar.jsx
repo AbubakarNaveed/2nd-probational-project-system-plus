@@ -5,6 +5,7 @@ import Button from "@components/Generals/button";
 import Logo from "@images/logo2.png";
 import Plus from "@images/plus.svg";
 import UserPic from "@images/sidebarUser.png";
+import { NavLink } from "react-router-dom";
 
 import { linksData } from "./sidebarData";
 
@@ -62,7 +63,7 @@ const sidebar = () => {
               {linksData["Overview"].map((link) => (
                 <a
                   key={link.id}
-                  className={link.id === activeLink ? "active" : ""}
+                  className={link.id === activeLink ? "activeAnchor" : ""}
                   onClick={() => handleLinkClick(link.id)}
                 >
                   <img src={link.icon} />
@@ -108,14 +109,17 @@ const sidebar = () => {
             <h1 style={{ marginLeft: "2px" }}>Overview</h1>
             <div>
               {linksData["User"].map((link) => (
-                <a
+                <NavLink
+                  to={link.path}
                   key={link.id}
-                  className={link.id === activeLink ? "activeAnchor" : ""}
+                  className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "activeAnchor" : ""
+                  }
                   onClick={() => handleLinkClick(link.id)}
                 >
                   <img src={link.icon} />
                   <p>{link.text}</p>
-                </a>
+                </NavLink>
               ))}
             </div>
           </div>
