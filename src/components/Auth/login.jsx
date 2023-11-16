@@ -47,7 +47,13 @@ const Login = () => {
           {/* <button class="btn btn-primary" type="button">
             Login
           </button> */}
-          <Button text={"Login"} />
+          <Button
+            text={"Login"}
+            fontColor={"#ffff"}
+            fontSize="18"
+            color="primary"
+            buttonSize={"lg"}
+          />
         </div>
         <div className="loginUtility2">
           <p>Don't have any?</p>

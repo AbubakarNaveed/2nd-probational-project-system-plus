@@ -1,25 +1,37 @@
 import React from "react";
 
-const Button = ({ icon = "none", text, color, type, size = "18" }) => {
+const Button = ({
+  icon = "none",
+  text,
+  fontColor,
+  color = "primary",
+  type = "",
+  fontSize = "18",
+  buttonSize = "",
+  isDisabled = false,
+}) => {
   // Determine the button classes based on the props
-  const buttonClasses = `btn btn-${type || "primary"} btn-${
-    color || "primary w-100"
+  const buttonClasses = `btn btn-${type ? `${type}-` : ""}${color} ${
+    buttonSize ? `btn-${buttonSize}` : ""
   }`;
 
   return (
-    <button type="button" className={buttonClasses}>
+    <button
+      type="button"
+      className={buttonClasses}
+      style={{ width: "100%" }}
+      disabled={isDisabled}
+    >
       {icon != "none" && (
-        <span
-          aria-hidden="true"
-          style={{ marginRight: "8px", marginBottom: "2px" }}
-        >
+        <span aria-hidden="true" style={{ marginRight: "8px" }}>
           <img src={icon} style={{ height: "20px", width: "20px" }} />
         </span>
       )}
       <span
         style={{
           fontWeight: 600,
-          fontSize: `${size}px`,
+          fontSize: `${fontSize}px`,
+          color: fontColor,
           wordBreak: "break-word",
         }}
       >

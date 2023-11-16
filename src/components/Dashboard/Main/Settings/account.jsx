@@ -1,9 +1,40 @@
 import React from "react";
-
+import Input from "@components/Generals/input";
+import DefaultAvatar from "@images/defaulAvartar.png";
+import Button from "@components/Generals/button";
 const account = () => {
   return (
-    <div>
-      <h1>Account</h1>
+    <div class="mainBody">
+      <div className="cardWithHeading">
+        <h1>Settings</h1>
+        <div className="cardInput row custom-gutter">
+          <div className="imageUploadSection col-2 p-0">
+            <img src={DefaultAvatar} />
+            <button>Upload Image</button>
+          </div>
+          <div className="formSection col-10 p-0">
+            <form>
+              <Input type={"text"} label={"Full Name *"} labelSize="md" />
+              <Input
+                type={"text"}
+                label={"Email *"}
+                defaultValue={"abc@gmail.com"}
+                labelSize="md"
+                isDisabled={true}
+              />
+              <Input
+                type={"text"}
+                label={"Phone Number *"}
+                defaultValue={"000-213-2134"}
+                labelSize="md"
+              />
+              <button type="button" class="btn btn-outline-secondary">
+                Primary
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

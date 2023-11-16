@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Input from "@components/Generals/input";
+import Button from "@components/Generals/button";
 const ForgotPassword = () => {
   return (
     <div className="signUpWrapper row">
@@ -25,9 +26,16 @@ const ForgotPassword = () => {
           <Input type={"text"} label={"Email *"} />
         </form>
         <div className="loginButton">
-          <button class="btn btn-primary" type="button">
+          {/* <button class="btn btn-primary" type="button">
             Send Email
-          </button>
+          </button> */}
+          <Button
+            text={"Send Email"}
+            fontColor={"#ffff"}
+            fontSize="18"
+            color="primary"
+            buttonSize={"lg"}
+          />
         </div>
         <div className="forgotUtility2">
           <a>

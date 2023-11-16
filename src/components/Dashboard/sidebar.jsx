@@ -54,7 +54,14 @@ const sidebar = () => {
           <img src={Logo} style={{ height: "20px", width: "160px" }} />
         </div>
         <div className="d-flex justify-content-center align-items-center w-100">
-          <Button text={"Create Trips"} size="16px" icon={Plus} />
+          {/* <Button text={"Create Trips"} size="16px" icon={Plus} /> */}
+          <Button
+            text={"Create Trips"}
+            fontColor={"#ffff"}
+            fontSize="16"
+            color="primary"
+            icon={Plus}
+          />
         </div>
         <div className="linksContainer">
           <div className="linkSection">

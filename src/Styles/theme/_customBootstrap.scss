@@ -4,8 +4,18 @@ $secondary: #dcdee6;
 //spacings
 $input-padding-x-lg: 12px;
 
-$btn-padding-y: 14px;
-$btn-padding-x: 16px;
+// Override Bootstrap variables
+$btn-padding-y: 12px; // Default horizontal padding
+$btn-padding-x: 16px; // Default vertical padding
+
+// Small button
+$btn-padding-y-sm: 10px;
+$btn-padding-x-sm: 16px;
+
+// Large button
+$btn-padding-y-lg: 14px;
+$btn-padding-x-lg: 16px;
+
 $btn-border-radius: 8px;
 // .row {
 //   --bs-gutter-x: 0;

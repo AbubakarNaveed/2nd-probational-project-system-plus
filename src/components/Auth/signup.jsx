@@ -1,5 +1,6 @@
 import React from "react";
 import Input from "@components/Generals/input";
+import Button from "@components/Generals/button";
 const signUpFormsCreditionals = [
   {
     id: 1,
@@ -91,9 +92,16 @@ const Signup = () => {
           </p>
         </div>
         <div className="loginButton">
-          <button class="btn btn-primary" type="button">
+          {/* <button class="btn btn-primary" type="button">
             Sign Up
-          </button>
+          </button> */}
+          <Button
+            text={"Sign up"}
+            fontColor={"#ffff"}
+            fontSize="18"
+            color="primary"
+            buttonSize={"lg"}
+          />
         </div>
         <div className="loginUtility2">
           <p>Already have an account?</p>

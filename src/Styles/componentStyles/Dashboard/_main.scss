@@ -66,3 +66,49 @@
     word-wrap: break-word;
   }
 }
+
+.mainBody {
+  padding: 24px 20px;
+  margin-top: 24px;
+  .cardWithHeading {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    h1 {
+      font-size: $font-large;
+      color: $authCardHeading;
+      font-weight: $font-weight-800;
+      line-height: 28px;
+      word-wrap: break-word;
+    }
+  }
+  .cardInput {
+    gap: 24px;
+    .formSection {
+      width: 100%;
+      max-width: 480px;
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    .imageUploadSection {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 130px;
+      width: 100%;
+      gap: 12px;
+
+      button {
+        border: 1px solid $gray2;
+        padding: 10px 16px;
+        background: #fff;
+        font-size: $font-medium-small;
+        border-radius: 8px;
+        font-weight: $font-weight-500;
+      }
+    }
+  }
+}
