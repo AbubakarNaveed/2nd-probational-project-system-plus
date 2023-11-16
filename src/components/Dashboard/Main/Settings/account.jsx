@@ -28,9 +28,15 @@ const account = () => {
                 defaultValue={"000-213-2134"}
                 labelSize="md"
               />
-              <button type="button" class="btn btn-outline-secondary">
-                Primary
-              </button>
+              <div style={{ width: "100", maxWidth: "120px" }}>
+                <Button
+                  text={"Save Changes"}
+                  buttonSize="sm"
+                  fontSize="14"
+                  fontColor={"#ffff"}
+                  isDisabled
+                />
+              </div>
             </form>
           </div>
         </div>

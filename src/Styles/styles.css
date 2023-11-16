@@ -3310,14 +3310,14 @@ textarea.form-control-lg {
   --bs-btn-padding-y: 14px;
   --bs-btn-padding-x: 16px;
   --bs-btn-font-size: 1.25rem;
-  --bs-btn-border-radius: var(--bs-border-radius-lg);
+  --bs-btn-border-radius: 8px;
 }
 
 .btn-sm, .btn-group-sm > .btn {
   --bs-btn-padding-y: 10px;
   --bs-btn-padding-x: 16px;
   --bs-btn-font-size: 0.875rem;
-  --bs-btn-border-radius: var(--bs-border-radius-sm);
+  --bs-btn-border-radius: 8px;
 }
 
 .fade {
