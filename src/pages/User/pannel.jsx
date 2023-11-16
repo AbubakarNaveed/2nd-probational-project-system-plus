@@ -1,8 +1,8 @@
 import React from "react";
-import Sidebar from "@components/Dashboard/sidebar";
-import Main from "@components/Dashboard/Main";
+import Sidebar from "@components/Userspannel/sidebar";
+import Main from "@components/Userspannel/Main";
 import { Outlet } from "react-router-dom";
-const Dashboard = () => {
+const Pannel = () => {
   return (
     <div style={{ height: "100vh", overflowX: "hidden", width: "100%" }}>
       <div className="row custom-gutter w-100">
@@ -19,4 +19,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Pannel;

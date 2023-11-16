@@ -11,9 +11,11 @@ import { linksData } from "./sidebarData";
 
 const sidebar = () => {
   const [activeLink, setActiveLink] = useState(null);
+  const [hide, setHide] = useState(false);
   const handleLinkClick = (id) => {
     setActiveLink(id);
   };
+
   return (
     <div
       style={{

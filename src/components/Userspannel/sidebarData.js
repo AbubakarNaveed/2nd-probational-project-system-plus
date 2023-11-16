@@ -34,7 +34,7 @@ export const linksData = {
       id: 10,
       text: "Settings",
       icon: Settings,
-      path: "/dashboard/settings/account",
+      path: "/user-panel/settings/account",
     },
   ],
 };

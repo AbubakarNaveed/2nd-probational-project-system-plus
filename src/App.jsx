@@ -10,11 +10,12 @@ import AdminAuth from "@pages/Auth/adminAuth";
 import Login from "@components/Auth/login";
 import Signup from "@components/Auth/signup";
 import ForgotPassword from "@components/Auth/forgotPassword";
-import Dashboard from "@pages/User/dashboard";
-import DefaultScreen from "@components/Dashboard/Main/DefaultScreen";
-import Setting from "@components/Dashboard/Main/Settings";
-import Account from "@components/Dashboard/Main/Settings/account";
-import Password from "@components/Dashboard/Main/Settings/password";
+import Pannel from "@pages/User/pannel";
+import DefaultScreen from "@components/Userspannel/Main/DefaultScreen";
+import Setting from "@components/Userspannel/Main/Settings";
+import Account from "@components/Userspannel/Main/Settings/account";
+import Password from "@components/Userspannel/Main/Settings/password";
+// import Companies from "@components/Userspannel/Main/Companies";
 function App() {
   const router = createBrowserRouter([
     {
@@ -35,8 +36,8 @@ function App() {
       element: <AdminAuth />,
     },
     {
-      path: "/dashboard",
-      element: <Dashboard />,
+      path: "/user-panel",
+      element: <Pannel />,
       children: [
         {
           path: "",

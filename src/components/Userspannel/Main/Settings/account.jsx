@@ -28,7 +28,7 @@ const account = () => {
                 defaultValue={"000-213-2134"}
                 labelSize="md"
               />
-              <div style={{ width: "100", maxWidth: "120px" }}>
+              <div style={{ width: "100", maxWidth: "180px" }}>
                 <Button
                   text={"Save Changes"}
                   buttonSize="sm"
