@@ -16,9 +16,9 @@ $btn-border-radius: 8px;
   margin-right: 0; // Use the negative margin to compensate for padding
 }
 
-@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+// .row > div {
+//   padding-right: 0;
+//   padding-left: 0;
+// }
 
-.row > div {
-  padding-right: 0;
-  padding-left: 0;
-}
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
