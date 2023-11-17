@@ -3,6 +3,7 @@ import Button from "@components/Generals/button";
 import Input from "@components/Generals/input";
 import SearchIcon from "@images/Search.svg";
 import Plus from "@images/plus.svg";
+import { companyDataRows, companyTableBodyRows } from "./companyData";
 const main = () => {
   return (
     <div className="mainContainer">
@@ -21,6 +22,49 @@ const main = () => {
               icon={Plus}
             />
           </div>
+        </div>
+      </div>
+      <div className="mainBody">
+        <div
+          style={{
+            border: "1px solid #dcdee6",
+            borderRadius: "8px",
+            borderBottom: 0,
+          }}
+        >
+          <table className="table">
+            <thead>
+              <tr>
+                {companyDataRows.map((item, index) => (
+                  <th key={index}>{item}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {companyTableBodyRows.map((row, index) => (
+                <tr key={index}>
+                  <td>
+                    <div
+                      style={{
+                        height: "50px",
+                        padding: 0,
+                        display: "flex",
+                        gap: "16px",
+                        alignItems: "center",
+                      }}
+                    >
+                      <img src={row["companyName"].avatar} />
+                      <p
+                        style={{ margin: 0, fontWeight: 400, fontSize: "14px" }}
+                      >
+                        {row["companyName"].name}
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

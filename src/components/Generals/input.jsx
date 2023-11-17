@@ -32,7 +32,7 @@ const Input = ({
       {icon ? (
         <span class="input-group-prepend position-absolute ">
           <button
-            className="btn  border-bottom-0 border-right-0 border-0"
+            className="btn border-bottom-0 border-right-0 border-0"
             type="button"
             style={{}}
           >
@@ -47,7 +47,7 @@ const Input = ({
         type={type}
         value={defaultValue || null}
         class="form-control"
-        style={{ paddingLeft: icon ? "50px" : "0px" }}
+        style={{ paddingLeft: icon ? "50px" : "12px" }}
         disabled={isDisabled}
         placeHolder={placeHolder}
       ></input>
