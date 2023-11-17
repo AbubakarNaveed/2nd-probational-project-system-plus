@@ -15,7 +15,8 @@ import DefaultScreen from "@components/Userspannel/Main/DefaultScreen";
 import Setting from "@components/Userspannel/Main/Settings";
 import Account from "@components/Userspannel/Main/Settings/account";
 import Password from "@components/Userspannel/Main/Settings/password";
-// import Companies from "@components/Userspannel/Main/Companies";
+import Companies from "@components/Userspannel/Main/Companies/main";
+// import Dashboards from "@components/Userspannel/Main/Dashboards";
 function App() {
   const router = createBrowserRouter([
     {
@@ -53,6 +54,9 @@ function App() {
             { path: "password", element: <Password /> },
           ],
         },
+
+        { path: "companies", element: <Companies /> },
+        { path: "dashboard", element: <h1>Under Construction</h1> },
       ],
     },
   ]);

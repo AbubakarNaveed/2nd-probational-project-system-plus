@@ -9,15 +9,19 @@ const password = () => {
         <div className="cardInput row custom-gutter">
           <div className="formSection col-10 p-0">
             <form>
-              <Input type={"text"} label={"Full Name *"} labelSize="md" />
               <Input
-                type={"password"}
+                type={"text"}
                 label={"Current Password *"}
                 labelSize="md"
               />
               <Input
                 type={"password"}
                 label={"New Password *"}
+                labelSize="md"
+              />
+              <Input
+                type={"password"}
+                label={"Confirm Password *"}
                 labelSize="md"
               />
               <div style={{ width: "100", maxWidth: "180px" }}>

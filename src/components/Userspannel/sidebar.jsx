@@ -10,7 +10,6 @@ import { NavLink } from "react-router-dom";
 import { linksData } from "./sidebarData";
 
 const sidebar = () => {
-  const [activeLink, setActiveLink] = useState(null);
   const [hide, setHide] = useState(false);
   const handleLinkClick = (id) => {
     setActiveLink(id);
@@ -70,14 +69,16 @@ const sidebar = () => {
             <h1 style={{ marginLeft: "2px" }}>Overview</h1>
             <div>
               {linksData["Overview"].map((link) => (
-                <a
+                <NavLink
+                  to={link.path}
                   key={link.id}
-                  className={link.id === activeLink ? "activeAnchor" : ""}
-                  onClick={() => handleLinkClick(link.id)}
+                  className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "activeAnchor" : ""
+                  }
                 >
                   <img src={link.icon} />
                   <p>{link.text}</p>
-                </a>
+                </NavLink>
               ))}
             </div>
           </div>
@@ -87,28 +88,32 @@ const sidebar = () => {
               {linksData["Resources"].map((link) => {
                 if (link.id === 7) {
                   return (
-                    <a
+                    <NavLink
+                      to={link.path}
                       key={link.id}
-                      className={link.id === activeLink ? "activeAnchor" : ""}
-                      onClick={() => handleLinkClick(link.id)}
+                      className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "activeAnchor" : ""
+                      }
                     >
                       <img src={link.icon} />
                       <p>
                         Service<span style={{ color: "transparent" }}>-</span>
                         Providers
                       </p>
-                    </a>
+                    </NavLink>
                   );
                 } else {
                   return (
-                    <a
+                    <NavLink
+                      to={link.path}
                       key={link.id}
-                      className={link.id === activeLink ? "activeAnchor" : ""}
-                      onClick={() => handleLinkClick(link.id)}
+                      className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "activeAnchor" : ""
+                      }
                     >
                       <img src={link.icon} />
                       <p>{link.text}</p>
-                    </a>
+                    </NavLink>
                   );
                 }
               })}
