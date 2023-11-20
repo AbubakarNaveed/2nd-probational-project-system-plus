@@ -13,10 +13,12 @@ const Input = ({
   labelSize = "lg",
   placeHolder = "",
   isDisabled = false,
+
+  styles,
   icon,
 }) => {
   return (
-    <div>
+    <div className={styles}>
       {label && icon && (
         <label
           style={{

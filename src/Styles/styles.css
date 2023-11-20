@@ -12291,10 +12291,11 @@ textarea.form-control-lg {
 }
 
 .mainContainer {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   padding: 0 !important;
   background-color: white;
+  overflow-y: auto;
 }
 .mainContainer .header {
   padding: 24px;
@@ -12307,6 +12308,9 @@ textarea.form-control-lg {
   font-size: 28px;
   font-weight: 800;
   margin: 0px;
+}
+.mainContainer .mainHeight {
+  height: calc(100% - 83px);
 }
 .mainContainer .headerWithNavs {
   padding: 24px 24px 0 24px;
@@ -12395,6 +12399,39 @@ textarea.form-control-lg {
   max-width: 130px;
   width: 100%;
   gap: 12px;
+}
+
+.changeCard {
+  padding: 24px 0;
+  border-bottom: 1px solid #dcdee6;
+}
+.changeCard .labelArea {
+  display: flex;
+  height: "100%";
+  width: "100%";
+  flex-direction: column;
+  gap: 8px;
+}
+.changeCard .labelArea h1, .changeCard .labelArea .h1 {
+  font-size: 18px;
+  margin: 0;
+  color: #292b33;
+  line-height: 22px;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+.changeCard .labelArea p {
+  margin: 0;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #838799;
+  font-weight: 400;
+  line-height: 18px;
+  word-wrap: break-word;
+}
+.changeCard .inputArea {
+  display: flex;
+  gap: 16px;
 }
 
 body {
