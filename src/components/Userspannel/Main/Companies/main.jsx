@@ -9,7 +9,12 @@ import { companyDataRows, companyTableBodyRows } from "./companyData";
 import Delete from "@images/delete.svg";
 import Edit from "@images/edit.svg";
 import View from "@images/view.svg";
+import { useNavigate } from "react-router-dom";
 const main = () => {
+  const navigate = useNavigate();
+  const handleAddnew = () => {
+    navigate("/user-panel/companies/add_new", { replace: true });
+  };
   return (
     <div className="mainContainer">
       <div className="header" style={{ alignItems: "center" }}>
@@ -25,6 +30,7 @@ const main = () => {
               fontSize="16"
               color="primary"
               icon={Plus}
+              clickEvent={handleAddnew}
             />
           </div>
         </div>

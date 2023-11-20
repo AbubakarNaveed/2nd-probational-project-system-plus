@@ -11916,6 +11916,20 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.customUpload {
+  border: 1px solid #dcdee6;
+  padding: 10px 16px;
+  background: #fff;
+  font-size: 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 300ms ease-in-out;
+}
+.customUpload:hover {
+  border-color: #e7aeb4;
+  box-shadow: -4px 4px 55px rgba(191, 57, 71, 0.12);
+}
+
 .authPageWrapper {
   width: 100%;
   height: 100vh;
@@ -12381,14 +12395,6 @@ textarea.form-control-lg {
   max-width: 130px;
   width: 100%;
   gap: 12px;
-}
-.mainBody .cardInput .imageUploadSection button {
-  border: 1px solid #dcdee6;
-  padding: 10px 16px;
-  background: #fff;
-  font-size: 14px;
-  border-radius: 8px;
-  font-weight: 500;
 }
 
 body {

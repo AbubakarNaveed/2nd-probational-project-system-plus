@@ -9,6 +9,7 @@ const Button = ({
   fontSize = "18",
   buttonSize = "",
   isDisabled = false,
+  clickEvent,
 }) => {
   // Determine the button classes based on the props
   const buttonClasses = `btn btn-${type ? `${type}-` : ""}${color} ${
@@ -21,6 +22,7 @@ const Button = ({
       className={buttonClasses}
       style={{ width: "100%" }}
       disabled={isDisabled}
+      onClick={() => clickEvent()}
     >
       {icon != "none" && (
         <span aria-hidden="true" style={{ marginRight: "8px" }}>

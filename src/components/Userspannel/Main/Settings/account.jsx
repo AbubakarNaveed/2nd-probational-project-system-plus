@@ -10,7 +10,7 @@ const account = () => {
         <div className="cardInput row custom-gutter">
           <div className="imageUploadSection col-2 p-0">
             <img src={DefaultAvatar} />
-            <button>Upload Image</button>
+            <button className="customUpload">Upload Image</button>
           </div>
           <div className="formSection col-10 p-0">
             <form>
