@@ -149,7 +149,14 @@ const main = () => {
                         alignItems: "center",
                       }}
                     >
-                      <button style={{ background: "none", border: 0 }}>
+                      <button
+                        style={{ background: "none", border: 0 }}
+                        onClick={() =>
+                          navigate("/user-panel/companies/edit", {
+                            replace: true,
+                          })
+                        }
+                      >
                         <img src={Edit} />
                       </button>
                       <button style={{ background: "none", border: 0 }}>

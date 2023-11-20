@@ -30,7 +30,11 @@ const Input = ({
           {label}
         </label>
       )}
-      <div class={`${icon ? "d-flex p-" : "form-group"} input-group-lg `}>
+      <div
+        class={`${
+          icon ? "d-flex p-" : "form-group"
+        } input-group-lg position-relative `}
+      >
         {label && !icon && (
           <label
             style={{
@@ -44,13 +48,16 @@ const Input = ({
         )}
 
         {icon ? (
-          <span class="input-group-prepend position-absolute ">
+          <span class="input-group-prepend position-absolute">
             <button
               className="btn border-bottom-0 border-right-0 border-0"
               type="button"
-              style={{}}
             >
-              <img src={icon} />
+              {labelSize === "md" ? (
+                <img src={icon} style={{ marginTop: "-10px" }} />
+              ) : (
+                <img src={icon} />
+              )}
             </button>
           </span>
         ) : (
@@ -61,10 +68,14 @@ const Input = ({
           type={type}
           value={defaultValue || null}
           class="form-control"
-          style={{ paddingLeft: icon ? "50px" : "12px" }}
+          style={{
+            paddingLeft: icon ? "50px" : "12px",
+            fontSize: fontSizes[labelSize],
+            margin: 0,
+          }}
           disabled={isDisabled}
           placeHolder={placeHolder}
-        ></input>
+        />
       </div>
     </div>
   );

@@ -18,6 +18,7 @@ import Account from "@components/Userspannel/Main/Settings/account";
 import Password from "@components/Userspannel/Main/Settings/password";
 import Companies from "@components/Userspannel/Main/Companies/main";
 import AddNew from "@components/Userspannel/Main/Companies/addNew";
+import Edit from "@components/Userspannel/Main/Companies/edit";
 // import Dashboards from "@components/Userspannel/Main/Dashboards";
 function App() {
   const router = createBrowserRouter([
@@ -63,6 +64,7 @@ function App() {
           // children: [{ path: "add_new", element: <AddNew /> }],
         },
         { path: "companies/add_new", element: <AddNew /> },
+        { path: "companies/edit", element: <Edit /> },
         { path: "dashboard", element: <h1>Under Construction</h1> },
       ],
     },
