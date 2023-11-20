@@ -1,10 +1,11 @@
 import "./App.css";
+import "./Styles/styles.css";
 import {
   createBrowserRouter,
   RouterProvider,
   Navigate,
 } from "react-router-dom";
-import "./Styles/styles.css";
+
 import AuthPage from "@pages/Auth/authPage";
 import AdminAuth from "@pages/Auth/adminAuth";
 import Login from "@components/Auth/login";
@@ -16,6 +17,7 @@ import Setting from "@components/Userspannel/Main/Settings";
 import Account from "@components/Userspannel/Main/Settings/account";
 import Password from "@components/Userspannel/Main/Settings/password";
 import Companies from "@components/Userspannel/Main/Companies/main";
+
 // import Dashboards from "@components/Userspannel/Main/Dashboards";
 function App() {
   const router = createBrowserRouter([

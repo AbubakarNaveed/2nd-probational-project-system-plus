@@ -3,7 +3,12 @@ import Button from "@components/Generals/button";
 import Input from "@components/Generals/input";
 import SearchIcon from "@images/Search.svg";
 import Plus from "@images/plus.svg";
+import Email from "@images/email.svg";
+import Phone from "@images/phone.svg";
 import { companyDataRows, companyTableBodyRows } from "./companyData";
+import Delete from "@images/delete.svg";
+import Edit from "@images/edit.svg";
+import View from "@images/view.svg";
 const main = () => {
   return (
     <div className="mainContainer">
@@ -59,6 +64,94 @@ const main = () => {
                       >
                         {row["companyName"].name}
                       </p>
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "4px",
+                        padding: 0,
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "8px",
+                        }}
+                      >
+                        <img src={Email} />
+                        <p
+                          style={{
+                            margin: 0,
+                            fontWeight: 400,
+                            fontSize: "14px",
+                          }}
+                        >
+                          {row["contact"].email}
+                        </p>
+                      </div>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "8px",
+                        }}
+                      >
+                        <img src={Phone} />
+                        <p
+                          style={{
+                            margin: 0,
+                            fontWeight: 400,
+                            fontSize: "14px",
+                          }}
+                        >
+                          {row["contact"].phone}
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      style={{
+                        padding: 0,
+                        display: "flex",
+                        height: "50px",
+                        alignItems: "center",
+                      }}
+                    >
+                      <p
+                        style={{
+                          margin: 0,
+                          fontWeight: 400,
+                          fontSize: "14px",
+                        }}
+                      >
+                        {row["tax"]}
+                      </p>
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      style={{
+                        padding: 0,
+                        display: "flex",
+                        height: "50px",
+                        gap: "12px",
+                        alignItems: "center",
+                      }}
+                    >
+                      <button style={{ background: "none", border: 0 }}>
+                        <img src={Edit} />
+                      </button>
+                      <button style={{ background: "none", border: 0 }}>
+                        <img src={Delete} />
+                      </button>
+                      <button style={{ background: "none", border: 0 }}>
+                        <img src={View} />
+                      </button>
                     </div>
                   </td>
                 </tr>
