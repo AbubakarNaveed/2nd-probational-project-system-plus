@@ -12394,4 +12394,16 @@ textarea.form-control-lg {
 body {
   background-color: #f9fafc !important;
   font-family: "Inter", sans-serif !important;
+}
+
+::-moz-placeholder {
+  color: #838799 !important;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+::placeholder {
+  color: #838799 !important;
+  font-size: 16px;
+  font-weight: 400;
 }/*# sourceMappingURL=styles.css.map */
