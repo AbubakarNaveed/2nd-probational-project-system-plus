@@ -19,6 +19,8 @@ import Password from "@components/Userspannel/Main/Settings/password";
 import Companies from "@components/Userspannel/Main/Companies/main";
 import AddNew from "@components/Userspannel/Main/Companies/addNew";
 import Edit from "@components/Userspannel/Main/Companies/edit";
+import AdminPannel from "@pages/Admin/pannel";
+import AdminDashboard from "@components/Adminpannel/Main/Dashboard";
 // import Dashboards from "@components/Userspannel/Main/Dashboards";
 function App() {
   const router = createBrowserRouter([
@@ -67,6 +69,15 @@ function App() {
         { path: "companies/edit", element: <Edit /> },
         { path: "dashboard", element: <h1>Under Construction</h1> },
       ],
+    },
+    {
+      path: "/admin-pannel",
+      element: <Navigate to="/admin-pannel/dashboard" />,
+    },
+    {
+      path: "/admin-pannel",
+      element: <AdminPannel />,
+      children: [{ path: "dashboard", element: <AdminDashboard /> }],
     },
   ]);
 

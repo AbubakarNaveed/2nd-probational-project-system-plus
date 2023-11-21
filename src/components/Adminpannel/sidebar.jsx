@@ -5,13 +5,13 @@ import Button from "@components/Generals/button";
 import Logo from "@images/logo2.png";
 import Plus from "@images/plus.svg";
 import UserPic from "@images/sidebarUser.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { linksData } from "./sidebarData";
 import { toggleSideBar } from "../../redux/Slices/statusSlice";
 import LogoMobile from "@images/logoMobile.png";
 
-const sidebar = () => {
+const Sidebar = () => {
   const dispatch = useDispatch();
   const hide = useSelector((state) => state.status.sidebarToggle);
 
@@ -167,4 +167,4 @@ const sidebar = () => {
   );
 };
 
-export default sidebar;
+export default Sidebar;

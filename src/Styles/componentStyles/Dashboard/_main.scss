@@ -76,6 +76,83 @@
   }
 }
 
+.adminMainBodyContainer {
+  padding: 0px 24px;
+}
+
+// .adminDashboardCard {
+//   padding: ;
+// }
+
+.adminCard {
+  padding: 40px 0px;
+  border: 1px solid $gray1 !important;
+  display: flex;
+  height: "100%";
+  align-items: center;
+  background-color: #fff;
+  div {
+    .name {
+      margin: 0;
+      margin-bottom: 12px;
+      font-size: $font-medium-small;
+      color: $gray4;
+      font-weight: $font-weight-500;
+    }
+    .content {
+      max-width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 16px;
+      h1 {
+        margin: 0;
+        font-size: 33px;
+        font-weight: $font-weight-700;
+      }
+    }
+    .time {
+      margin: 0;
+      margin-top: 16px;
+      font-size: $font-small;
+      line-height: 16px;
+      word-wrap: break-word;
+      color: $gray4;
+    }
+  }
+}
+
+.adminMainBodyCardContainer {
+  display: flex;
+  flex-direction: column;
+
+  .cardRow {
+    padding: 40px 112px;
+    background-color: #fff;
+  }
+}
+.adminDashboardWelcomeText {
+  padding: 28px 24px 24px 24px;
+  background-color: $bgColor;
+  width: 100%;
+  h1 {
+    font-size: $font-large;
+    font-weight: $font-weight-700;
+    color: $authCardHeading;
+    margin-bottom: 17px;
+    line-height: 28px;
+    word-wrap: break-word;
+  }
+  p {
+    margin: 0;
+    font-weight: $font-medium;
+    color: $gray4;
+    font-weight: $font-weight-500;
+    letter-spacing: 0.32px;
+    word-wrap: break-word;
+  }
+}
+
 .mainBody {
   padding: 24px 20px;
   margin-top: 24px;

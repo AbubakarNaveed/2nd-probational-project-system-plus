@@ -1,6 +1,7 @@
 //colors
 $primary: #bf3947;
 $secondary: #dcdee6;
+$success: #e6fff3;
 // $info:;
 
 $table-variants: (
@@ -43,11 +44,7 @@ $btn-border-radius-sm: 8px;
 
 $input-group-addon-color: #fff;
 
-// .table {
-//   border: 1px solid;
-//   border-radius: 10px !important;
-// }
-
+// table
 .table {
   margin: 0 !important;
 
@@ -88,4 +85,11 @@ $input-group-addon-color: #fff;
     }
   }
 }
+
+//Badge
+$badge-color: #008042;
+$badge-padding-y: 4px;
+$badge-padding-x: 4px;
+$badge-border-radius: 200px;
+
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
