@@ -33,6 +33,13 @@
   }
 }
 
+.linkContainerToggle {
+  gap: 0px !important;
+}
+.contentResponsive {
+  max-width: 120px;
+  align-items: center;
+}
 .linksContainer {
   display: flex;
   flex-direction: column;

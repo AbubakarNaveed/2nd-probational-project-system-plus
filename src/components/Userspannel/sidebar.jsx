@@ -6,15 +6,18 @@ import Logo from "@images/logo2.png";
 import Plus from "@images/plus.svg";
 import UserPic from "@images/sidebarUser.png";
 import { NavLink } from "react-router-dom";
-
+import { useDispatch, useSelector } from "react-redux";
 import { linksData } from "./sidebarData";
+import { toggleSideBar } from "../../redux/Slices/statusSlice";
+import LogoMobile from "@images/logoMobile.png";
 
 const sidebar = () => {
-  const [hide, setHide] = useState(false);
-  const handleLinkClick = (id) => {
-    setActiveLink(id);
-  };
+  const dispatch = useDispatch();
+  const hide = useSelector((state) => state.status.sidebarToggle);
 
+  const handleToggleHide = () => {
+    dispatch(toggleSideBar());
+  };
   return (
     <div
       style={{
@@ -33,7 +36,7 @@ const sidebar = () => {
         overflowX: "hidden",
       }}
     >
-      <div className="contentSection">
+      <div className={`contentSection ${hide && "contentResponsive"}`}>
         <div
           className="d-flex align-items-center justify-content-center "
           style={{ gap: "16px", width: "100%" }}
@@ -46,27 +49,33 @@ const sidebar = () => {
               padding: "4px",
               borderRadius: "4px",
             }}
+            onClick={() => handleToggleHide()}
           >
             <img
               src={Burger}
               style={{ height: "20px", width: "20px", marginTop: "-2px" }}
             />
           </button>
-          <img src={Logo} style={{ height: "20px", width: "160px" }} />
+          {hide ? (
+            <img src={LogoMobile} />
+          ) : (
+            <img src={Logo} style={{ height: "20px", width: "160px" }} />
+          )}
         </div>
         <div className="d-flex justify-content-center align-items-center w-100">
           {/* <Button text={"Create Trips"} size="16px" icon={Plus} /> */}
           <Button
-            text={"Create Trips"}
+            text={!hide && "Create Trips"}
             fontColor={"#ffff"}
             fontSize="16"
             color="primary"
             icon={Plus}
           />
         </div>
-        <div className="linksContainer">
+        <div className={`linksContainer ${hide && "linkContainerToggle"}`}>
           <div className="linkSection">
-            <h1 style={{ marginLeft: "2px" }}>Overview</h1>
+            {!hide && <h1 style={{ marginLeft: "2px" }}>Overview</h1>}
+
             <div>
               {linksData["Overview"].map((link) => (
                 <NavLink
@@ -77,13 +86,14 @@ const sidebar = () => {
                   }
                 >
                   <img src={link.icon} />
-                  <p>{link.text}</p>
+                  {!hide && <p>{link.text}</p>}
                 </NavLink>
               ))}
             </div>
           </div>
           <div className="linkSection">
-            <h1 style={{ marginLeft: "2px" }}> ADD RESOURCES</h1>
+            {!hide && <h1 style={{ marginLeft: "2px" }}> ADD RESOURCES</h1>}
+
             <div>
               {linksData["Resources"].map((link) => {
                 if (link.id === 7) {
@@ -96,10 +106,12 @@ const sidebar = () => {
                       }
                     >
                       <img src={link.icon} />
-                      <p>
-                        Service<span style={{ color: "transparent" }}>-</span>
-                        Providers
-                      </p>
+                      {!hide && (
+                        <p>
+                          Service<span style={{ color: "transparent" }}>-</span>
+                          Providers
+                        </p>
+                      )}
                     </NavLink>
                   );
                 } else {
@@ -112,7 +124,7 @@ const sidebar = () => {
                       }
                     >
                       <img src={link.icon} />
-                      <p>{link.text}</p>
+                      {!hide && <p>{link.text}</p>}
                     </NavLink>
                   );
                 }
@@ -120,7 +132,7 @@ const sidebar = () => {
             </div>
           </div>
           <div className="linkSection">
-            <h1 style={{ marginLeft: "2px" }}>Overview</h1>
+            {!hide && <h1 style={{ marginLeft: "2px" }}>Overview</h1>}
             <div>
               {linksData["User"].map((link) => (
                 <NavLink
@@ -132,7 +144,7 @@ const sidebar = () => {
                   onClick={() => handleLinkClick(link.id)}
                 >
                   <img src={link.icon} />
-                  <p>{link.text}</p>
+                  {!hide && <p>{link.text}</p>}
                 </NavLink>
               ))}
             </div>
@@ -140,9 +152,9 @@ const sidebar = () => {
         </div>
       </div>
 
-      <div className="profileSection">
+      <div className={`profileSection ${hide && "contentResponsive"}`}>
         <img src={UserPic} />
-        <p>Adam Johson </p>
+        {!hide && <p>Adam Johson </p>}
         <button>
           <img src={Exit} style={{ height: "16px", width: "16px" }} />
         </button>

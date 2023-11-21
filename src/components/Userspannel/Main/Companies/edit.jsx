@@ -57,6 +57,7 @@ const Edit = () => {
                   type={"text"}
                   labelSize="md"
                   styles={"col-6 p-0"}
+                  fontS
                 />
                 <Input
                   label={"Tax Registration Number"}
