@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "@components/Generals/button";
 import Input from "@components/Generals/input";
 import SearchIcon from "@images/Search.svg";
@@ -10,11 +10,19 @@ import Delete from "@images/delete.svg";
 import Edit from "@images/edit.svg";
 import View from "@images/view.svg";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { closeOffcanvas } from "../../../../redux/Slices/statusSlice";
 const main = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const handleAddnew = () => {
     navigate("/user-panel/companies/add_new", { replace: true });
   };
+
+  useEffect(() => {
+    dispatch(closeOffcanvas());
+  }, []);
   return (
     <div className="mainContainer">
       <div className="header" style={{ alignItems: "center" }}>

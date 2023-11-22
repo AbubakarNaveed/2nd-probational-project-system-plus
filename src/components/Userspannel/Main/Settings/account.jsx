@@ -2,7 +2,23 @@ import React from "react";
 import Input from "@components/Generals/input";
 import DefaultAvatar from "@images/defaulAvartar.png";
 import Button from "@components/Generals/button";
+import { useLocation } from "react-router-dom";
 const account = () => {
+  const location = useLocation();
+
+  // Check if the parent route has changed
+  const isParentRouteChanged = location.pathname !== "/user-panel/settings";
+
+  const handleLinkClick = (path) => {
+    if (!isParentRouteChanged) {
+      // Prevent browser reloading for child routes
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    // Navigate to the selected child route
+    navigate(path);
+  };
   return (
     <div class="mainBody">
       <div className="cardWithHeading">

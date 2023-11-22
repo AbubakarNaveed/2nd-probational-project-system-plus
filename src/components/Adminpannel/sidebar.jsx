@@ -56,11 +56,7 @@ const Sidebar = () => {
               style={{ height: "20px", width: "20px", marginTop: "-2px" }}
             />
           </button>
-          {hide ? (
-            <img src={LogoMobile} />
-          ) : (
-            <img src={Logo} style={{ height: "20px", width: "160px" }} />
-          )}
+          {hide ? <img src={LogoMobile} /> : <img src={Logo} />}
         </div>
         <div className="d-flex justify-content-center align-items-center w-100">
           {/* <Button text={"Create Trips"} size="16px" icon={Plus} /> */}

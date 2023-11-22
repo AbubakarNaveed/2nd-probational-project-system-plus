@@ -11,7 +11,7 @@ import { linksData } from "./sidebarData";
 import { toggleSideBar } from "../../redux/Slices/statusSlice";
 import LogoMobile from "@images/logoMobile.png";
 
-const sidebar = () => {
+const sidebar = ({ offcanvas }) => {
   const dispatch = useDispatch();
   const hide = useSelector((state) => state.status.sidebarToggle);
 
@@ -24,7 +24,7 @@ const sidebar = () => {
         height: "100vh",
         width: "100%",
         overflowY: "auto",
-        padding: "24px 16px",
+        padding: offcanvas ? "24px 16px 60px 16px" : "24px 16px",
         borderRight: "1px solid #dcdee6",
         background: "red",
         display: "flex",
@@ -38,29 +38,28 @@ const sidebar = () => {
     >
       <div className={`contentSection ${hide && "contentResponsive"}`}>
         <div
-          className="d-flex align-items-center justify-content-center "
+          className="d-flex align-items-center justify-content-center"
           style={{ gap: "16px", width: "100%" }}
         >
-          <button
-            style={{
-              border: "1px #DCDEE6 solid",
-              background: "#fff",
+          {!offcanvas && (
+            <button
+              style={{
+                border: "1px #DCDEE6 solid",
+                background: "#fff",
 
-              padding: "4px",
-              borderRadius: "4px",
-            }}
-            onClick={() => handleToggleHide()}
-          >
-            <img
-              src={Burger}
-              style={{ height: "20px", width: "20px", marginTop: "-2px" }}
-            />
-          </button>
-          {hide ? (
-            <img src={LogoMobile} />
-          ) : (
-            <img src={Logo} style={{ height: "20px", width: "160px" }} />
+                padding: "4px",
+                borderRadius: "4px",
+              }}
+              onClick={() => handleToggleHide()}
+            >
+              <img
+                src={Burger}
+                style={{ height: "20px", width: "20px", marginTop: "-2px" }}
+              />
+            </button>
           )}
+
+          {hide ? <img src={LogoMobile} /> : <img src={Logo} />}
         </div>
         <div className="d-flex justify-content-center align-items-center w-100">
           {/* <Button text={"Create Trips"} size="16px" icon={Plus} /> */}

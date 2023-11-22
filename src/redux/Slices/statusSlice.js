@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-const initialState = { sidebarToggle: false };
+const initialState = { sidebarToggle: false, offCanvasShow: false };
 
 const StatusSlice = createSlice({
   name: "status",
@@ -8,8 +8,15 @@ const StatusSlice = createSlice({
     toggleSideBar: (state) => {
       state.sidebarToggle = !state.sidebarToggle;
     },
+    closeOffcanvas: (state) => {
+      state.offCanvasShow = false;
+    },
+    openOffcanvas: (state) => {
+      state.offCanvasShow = true;
+    },
   },
 });
 
-export const { toggleSideBar } = StatusSlice.actions;
+export const { toggleSideBar, closeOffcanvas, openOffcanvas } =
+  StatusSlice.actions;
 export default StatusSlice.reducer;
