@@ -12522,6 +12522,45 @@ textarea.form-control-lg {
     background-color: #f9fafc;
   }
 }
+.companyInputSection {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.companyInputSection .inputContainer {
+  width: 350px;
+}
+
+.mobileHeading {
+  display: none;
+}
+
+.inputContainerMobile {
+  display: none;
+}
+
+@media only screen and (max-width: 769px) {
+  .header {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .companyInputSection {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .companyInputSection .inputContainer {
+    display: none;
+  }
+  .inputContainerMobile {
+    display: block;
+    width: 100%;
+  }
+  .mobileHeading {
+    display: block;
+  }
+}
 body {
   background-color: #f9fafc !important;
   font-family: "Inter", sans-serif !important;

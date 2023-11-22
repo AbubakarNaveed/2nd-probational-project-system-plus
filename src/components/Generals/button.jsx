@@ -10,6 +10,7 @@ const Button = ({
   buttonSize = "",
   isDisabled = false,
   clickEvent,
+  responsive = false,
 }) => {
   // Determine the button classes based on the props
   const buttonClasses = `btn btn-${type ? `${type}-` : ""}${color} ${

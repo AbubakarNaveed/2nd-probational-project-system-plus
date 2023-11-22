@@ -26,9 +26,11 @@ const main = () => {
   return (
     <div className="mainContainer">
       <div className="header" style={{ alignItems: "center" }}>
-        <h1>Companies</h1>
-        <div className=" d-flex flex-row" style={{ gap: "12px" }}>
-          <div style={{ width: "100%", maxWidth: "350px" }}>
+        <h1 className=" d-none d-md-block ">Companies</h1>
+
+        <div className="companyInputSection">
+          <h1 className="mobileHeading">Companies</h1>
+          <div className="inputContainer">
             <Input placeHolder="Search here" icon={SearchIcon} />
           </div>
           <div style={{ width: "140px" }}>
@@ -39,8 +41,13 @@ const main = () => {
               color="primary"
               icon={Plus}
               clickEvent={handleAddnew}
+              responsive={true}
             />
           </div>
+        </div>
+
+        <div className="inputContainerMobile">
+          <Input placeHolder="Search here" icon={SearchIcon} />
         </div>
       </div>
       <div className="mainBody">
