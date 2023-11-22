@@ -50,14 +50,8 @@ const main = () => {
           <Input placeHolder="Search here" icon={SearchIcon} />
         </div>
       </div>
-      <div className="mainBody">
-        <div
-          style={{
-            border: "1px solid #dcdee6",
-            borderRadius: "8px",
-            borderBottom: 0,
-          }}
-        >
+      <div className="mainBody mainBodyTable">
+        <div className="tableBody">
           <table className="table">
             <thead>
               <tr>

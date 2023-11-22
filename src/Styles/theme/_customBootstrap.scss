@@ -103,4 +103,30 @@ $grid-breakpoints: (
   xxl: 1400px,
 );
 
+@media only screen and (max-width: 588px) {
+  .table {
+    thead {
+      display: none;
+    }
+    tbody {
+      tr {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #dcdee6;
+        td {
+          border: 0;
+          padding: 4px 0px 4px 16px;
+          & > :first-child {
+            padding-left: 0px;
+            padding-right: 0px;
+          }
+          & > :last-child {
+            padding-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";

@@ -36,6 +36,27 @@
   border-radius: 8px !important;
 }
 
+@media only screen and (max-width: 588px) {
+  .table thead {
+    display: none;
+  }
+  .table tbody tr {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #dcdee6;
+  }
+  .table tbody tr td {
+    border: 0;
+    padding: 4px 0px 4px 16px;
+  }
+  .table tbody tr td > :first-child {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .table tbody tr td > :last-child {
+    padding-right: 0px;
+  }
+}
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -12559,6 +12580,20 @@ textarea.form-control-lg {
   }
   .mobileHeading {
     display: block;
+  }
+}
+.tableBody {
+  border: 1px solid #dcdee6;
+}
+
+@media only screen and (max-width: 588px) {
+  .tableBody {
+    border: 0;
+  }
+  .mainBody {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
   }
 }
 body {

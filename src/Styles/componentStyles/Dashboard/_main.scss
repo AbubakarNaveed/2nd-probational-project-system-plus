@@ -286,3 +286,18 @@
     display: block;
   }
 }
+
+.tableBody {
+  border: 1px solid $gray2;
+}
+
+@media only screen and (max-width: 588px) {
+  .tableBody {
+    border: 0;
+  }
+  .mainBody {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+  }
+}
