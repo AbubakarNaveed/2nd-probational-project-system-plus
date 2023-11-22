@@ -144,7 +144,6 @@ const sidebar = ({ offcanvas }) => {
                   className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "activeAnchor" : ""
                   }
-                  onClick={() => handleLinkClick(link.id)}
                 >
                   <img src={link.icon} />
                   {!hide && <p>{link.text}</p>}

@@ -2,12 +2,8 @@ import React from "react";
 import Input from "@components/Generals/input";
 import DefaultAvatar from "@images/defaulAvartar.png";
 import Button from "@components/Generals/button";
-import { useLocation } from "react-router-dom";
+
 const account = () => {
-  const location = useLocation();
-
-  // Check if the parent route has changed
-
   return (
     <div class="mainBody">
       <div className="cardWithHeading">
