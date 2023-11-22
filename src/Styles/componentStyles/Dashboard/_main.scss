@@ -265,10 +265,21 @@
   display: none;
 }
 @media only screen and (max-width: 769px) {
+  .changeCard {
+    .inputArea {
+      & > :nth-child(1) {
+        margin: 16px 0px;
+      }
+    }
+  }
   .header {
+    display: flex;
     flex-direction: column;
     width: 100%;
     gap: 12px;
+  }
+  .logoHeader {
+    flex-direction: row !important;
   }
   .companyInputSection {
     width: 100%;
@@ -295,9 +306,17 @@
   .tableBody {
     border: 0;
   }
-  .mainBody {
+  .mainBodyTable {
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 0;
+  }
+  .changeCard {
+    .inputArea {
+      gap: 0;
+      & > :nth-child(1) {
+        margin: 16px 0px;
+      }
+    }
   }
 }

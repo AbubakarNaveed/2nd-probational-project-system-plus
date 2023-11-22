@@ -21,6 +21,7 @@ import AddNew from "@components/Userspannel/Main/Companies/addNew";
 import Edit from "@components/Userspannel/Main/Companies/edit";
 import AdminPannel from "@pages/Admin/pannel";
 import AdminDashboard from "@components/Adminpannel/Main/Dashboard";
+import Users from "@components/Adminpannel/Main/Users";
 // import Dashboards from "@components/Userspannel/Main/Dashboards";
 function App() {
   const router = createBrowserRouter([
@@ -77,7 +78,10 @@ function App() {
     {
       path: "/admin-pannel",
       element: <AdminPannel />,
-      children: [{ path: "dashboard", element: <AdminDashboard /> }],
+      children: [
+        { path: "dashboard", element: <AdminDashboard /> },
+        { path: "users", element: <Users /> },
+      ],
     },
   ]);
 

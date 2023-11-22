@@ -10,7 +10,7 @@ const Edit = () => {
   const navigate = useNavigate();
   return (
     <div className="mainContainer">
-      <div className="header" style={{ alignItems: "center" }}>
+      <div className="header logoHeader" style={{ alignItems: "center" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
           <button
             style={{ backgroundColor: "transparent", border: 0 }}
@@ -31,11 +31,11 @@ const Edit = () => {
       >
         <div className="changeCardSection">
           <div className="changeCard row custom-gutter">
-            <div className="labelArea col-3 p-0">
+            <div className="labelArea col-md-3 p-0 col-12">
               <h1>Company Details</h1>
               <p>Add company details to be used while creating trip</p>
             </div>
-            <div className="inputArea col-9 p-0 row custom-gutter">
+            <div className="inputArea col-md-9 col-12 p-0 row custom-gutter">
               <div
                 className=" col-12 p-0"
                 style={{
@@ -56,13 +56,13 @@ const Edit = () => {
                   defaultValue={"Company ABC"}
                   type={"text"}
                   labelSize="md"
-                  styles={"col-6 p-0"}
+                  styles={"col-sm-6 p-0 col-12"}
                   fontS
                 />
                 <Input
                   label={"Tax Registration Number"}
                   type={"text"}
-                  styles={"col-6 p-0 ps-2"}
+                  styles={"col-sm-6 p-0 ps-sm-2 col-12 ps-0"}
                   labelSize="md"
                 />
               </div>
@@ -71,13 +71,13 @@ const Edit = () => {
                   label={"Email"}
                   type={"email"}
                   labelSize="md"
-                  styles={"col-6 p-0"}
+                  styles={"col-sm-6 p-0 col-12"}
                 />
                 <Input
                   label={"Phone"}
                   type={"text"}
                   labelSize="md"
-                  styles={"col-6 p-0 ps-2"}
+                  styles={"col-sm-6 col-12 p-0 ps-sm-2 ps-0 "}
                 />
               </div>
 
@@ -88,28 +88,28 @@ const Edit = () => {
                   labelSize="md"
                   placeHolder="search location"
                   icon={SearchIcon}
-                  styles={"col-6 p-0"}
+                  styles={"col-sm-6 col-12 p-0"}
                 />
               </div>
             </div>
           </div>
           <div className="changeCard row custom-gutter">
-            <div className="labelArea col-3 p-0">
+            <div className="labelArea col-md-3 p-0 col-12">
               <h1>Billing Contact</h1>
               <p>Choose a billing contact to recieve</p>
             </div>
-            <div className="inputArea col-9 p-0 row custom-gutter">
+            <div className="inputArea col-md-9 col-12 p-0 row custom-gutter">
               <div className=" col-12 p-0 row custom-gutter">
                 <Input
                   label={"Contact Name"}
                   type={"text"}
                   labelSize="md"
-                  styles={"col-6 p-0"}
+                  styles={"col-sm-6 p-0 col-12"}
                 />
                 <Input
                   label={"Phone Number"}
                   type={"text"}
-                  styles={"col-6 p-0 ps-2"}
+                  styles={"col-sm-6 p-0 ps-sm-2 col-12 ps-0"}
                   labelSize="md"
                 />
               </div>
@@ -119,11 +119,11 @@ const Edit = () => {
                   type={"text"}
                   label={"Billing Address"}
                   labelSize="md"
-                  styles={"col-6 p-0"}
+                  styles={"col-sm-6 p-0 col-12"}
                 />
               </div>
               <div className=" col-12 p-0 row custom-gutter">
-                <div className="col-6 p-0 d-flex align-items-center gap-1 ">
+                <div className="col-md-6 p-0 d-flex align-items-center gap-1 mt-sm-0 mt-3  ">
                   <input type="checkbox" />
                   <p
                     style={{
@@ -140,11 +140,11 @@ const Edit = () => {
             </div>
           </div>
           <div className="changeCard row custom-gutter">
-            <div className="labelArea col-3 p-0">
+            <div className="labelArea col-md-3 p-0 col-12">
               <h1>Addresses</h1>
               <p>List down waypoints to be used while creating trip</p>
             </div>
-            <div className="inputArea col-9 p-0 row custom-gutter">
+            <div className="inputArea col-md-9 col-12  p-0 row custom-gutter">
               <div
                 className=" col-12 p-0"
                 style={{

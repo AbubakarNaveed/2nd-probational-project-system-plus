@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Sidebar from "@components/Userspannel/sidebar";
+import Sidebar from "@components/Generals/sidebar";
 import Main from "@components/Userspannel/Main";
 import { Outlet } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import TopBar from "@components/Userspannel/topBar";
+import TopBar from "@components/Generals/topBar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { openOffcanvas, closeOffcanvas } from "../../redux/Slices/statusSlice";
 
