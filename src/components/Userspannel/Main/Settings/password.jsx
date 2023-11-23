@@ -24,7 +24,7 @@ const password = () => {
                 label={"Confirm Password *"}
                 labelSize="md"
               />
-              <div style={{ width: "100", maxWidth: "180px" }}>
+              <div style={{ width: "100%", maxWidth: "180px" }}>
                 <Button
                   text={"Change Password"}
                   buttonSize="sm"
