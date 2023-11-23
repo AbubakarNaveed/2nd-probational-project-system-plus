@@ -17,23 +17,23 @@
 .table thead tr > :first-child {
   padding-left: 24px;
   padding-right: 0px;
-  border-radius: 8px;
+  border-radius: 8px !important;
 }
 .table thead tr > :last-child {
   padding-right: 24px;
-  border-radius: 8px;
+  border-radius: 8px !important;
 }
 .table tbody tr td {
   padding: 8px 0px 8px 16px;
 }
-.table tbody tr td > :first-child {
-  padding-left: 24px;
-  padding-right: 0px;
+.table tbody tr > :nth-child(1) {
   border-radius: 8px !important;
 }
-.table tbody tr td > :last-child {
-  padding-right: 24px;
+.table tbody tr > :last-child {
   border-radius: 8px !important;
+}
+.table tbody > :last-child {
+  border-color: #fff;
 }
 
 @media only screen and (max-width: 588px) {
@@ -44,6 +44,7 @@
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #dcdee6;
+    border-radius: 8px !important;
   }
   .table tbody tr td {
     border: 0;

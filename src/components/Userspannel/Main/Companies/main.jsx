@@ -62,8 +62,8 @@ const main = () => {
         </div>
       </div>
       <div className="mainBody mainBodyTable">
-        <div className="tableBody">
-          <table className="table">
+        <div className="tableBody" style={{ borderRadius: "8px" }}>
+          <table className="table rounded">
             <thead>
               <tr>
                 {companyDataRows.map((item, index) => (

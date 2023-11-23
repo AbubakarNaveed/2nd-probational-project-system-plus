@@ -60,11 +60,11 @@ $input-group-addon-color: #fff;
       & > :first-child {
         padding-left: 24px;
         padding-right: 0px;
-        border-radius: 8px;
+        border-radius: 8px !important;
       }
       & > :last-child {
         padding-right: 24px;
-        border-radius: 8px;
+        border-radius: 8px !important;
       }
     }
   }
@@ -72,16 +72,16 @@ $input-group-addon-color: #fff;
     tr {
       td {
         padding: 8px 0px 8px 16px;
-        & > :first-child {
-          padding-left: 24px;
-          padding-right: 0px;
-          border-radius: 8px !important;
-        }
-        & > :last-child {
-          padding-right: 24px;
-          border-radius: 8px !important;
-        }
       }
+      & > :nth-child(1) {
+        border-radius: 8px !important;
+      }
+      & > :last-child {
+        border-radius: 8px !important;
+      }
+    }
+    & > :last-child {
+      border-color: #fff;
     }
   }
 }
@@ -113,6 +113,7 @@ $grid-breakpoints: (
         display: flex;
         flex-direction: column;
         border-bottom: 1px solid #dcdee6;
+        border-radius: 8px !important;
         td {
           border: 0;
           padding: 4px 0px 4px 16px;
