@@ -129,4 +129,18 @@ $grid-breakpoints: (
   }
 }
 
+//offCanvas
+
+//This class is only for the offcanvas in the companies page
+.offcanvas-width {
+  width: 630px !important;
+}
+
+.btn-close {
+  margin: 0 !important;
+}
+.offcanvas-header {
+  align-items: start !important;
+}
+
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";

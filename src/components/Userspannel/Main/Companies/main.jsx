@@ -12,6 +12,8 @@ import View from "@images/view.svg";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { closeOffcanvas } from "../../../../redux/Slices/statusSlice";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import OffCanvasHeader from "./offcanvasComponents/Header";
 const main = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -182,6 +184,18 @@ const main = () => {
           </table>
         </div>
       </div>
+      <Offcanvas
+        show={true}
+        className={"offcanvas-width"}
+        style={{ padding: "20px 24px" }}
+      >
+        <Offcanvas.Header
+          style={{ borderBottom: "1px solid #dcdee6", padding: 0 }}
+          closeButton
+        >
+          <OffCanvasHeader />
+        </Offcanvas.Header>
+      </Offcanvas>
     </div>
   );
 };
