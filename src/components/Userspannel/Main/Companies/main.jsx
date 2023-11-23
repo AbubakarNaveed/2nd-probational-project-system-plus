@@ -10,21 +10,30 @@ import Delete from "@images/delete.svg";
 import Edit from "@images/edit.svg";
 import View from "@images/view.svg";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { closeOffcanvas } from "../../../../redux/Slices/statusSlice";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  closeOffcanvas,
+  openViewCompany,
+  closeViewCompany,
+} from "../../../../redux/Slices/statusSlice";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import OffCanvasHeader from "./offcanvasComponents/Header";
+import OffCanvasBody from "./offcanvasComponents/Body";
+
 const main = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const viewCompany = useSelector((state) => state.status.viewCompany);
 
   const handleAddnew = () => {
-    navigate("/user-panel/companies/add_new", { replace: true });
+    navigate("/user-pannel/companies/add_new", { replace: true });
   };
-
+  const handleOpenCompanyView = () => dispatch(openViewCompany());
+  const handleCloseViewCompany = () => dispatch(closeViewCompany());
   useEffect(() => {
     dispatch(closeOffcanvas());
   }, []);
+
   return (
     <div className="mainContainer">
       <div className="header" style={{ alignItems: "center" }}>
@@ -163,7 +172,7 @@ const main = () => {
                       <button
                         style={{ background: "none", border: 0 }}
                         onClick={() =>
-                          navigate("/user-panel/companies/edit", {
+                          navigate("/user-pannel/companies/edit", {
                             replace: true,
                           })
                         }
@@ -173,7 +182,10 @@ const main = () => {
                       <button style={{ background: "none", border: 0 }}>
                         <img src={Delete} />
                       </button>
-                      <button style={{ background: "none", border: 0 }}>
+                      <button
+                        style={{ background: "none", border: 0 }}
+                        onClick={() => handleOpenCompanyView()}
+                      >
                         <img src={View} />
                       </button>
                     </div>
@@ -185,9 +197,11 @@ const main = () => {
         </div>
       </div>
       <Offcanvas
-        show={true}
+        show={viewCompany}
         className={"offcanvas-width"}
         style={{ padding: "20px 24px" }}
+        onHide={handleCloseViewCompany}
+        placement="end"
       >
         <Offcanvas.Header
           style={{ borderBottom: "1px solid #dcdee6", padding: 0 }}
@@ -195,6 +209,7 @@ const main = () => {
         >
           <OffCanvasHeader />
         </Offcanvas.Header>
+        <OffCanvasBody />
       </Offcanvas>
     </div>
   );

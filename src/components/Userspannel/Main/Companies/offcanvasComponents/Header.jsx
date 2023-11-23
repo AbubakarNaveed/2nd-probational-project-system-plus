@@ -4,7 +4,9 @@ import Email from "@images/email.svg";
 import Phone from "@images/phone.svg";
 import Location from "@images/location.svg";
 import Edit from "@images/editBlack.svg";
+import { useNavigate } from "react-router-dom";
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <div
       style={{
@@ -65,7 +67,14 @@ const Header = () => {
           marginRight: "12px",
         }}
       >
-        <button className="customUpload">
+        <button
+          className="customUpload"
+          onClick={() =>
+            navigate("/user-pannel/companies/edit", {
+              replace: true,
+            })
+          }
+        >
           <div
             style={{
               display: "flex",
@@ -94,4 +103,5 @@ const logoTexStyle = {
   fontWeight: 400,
   lineHeight: "18px",
 };
+
 export default Header;

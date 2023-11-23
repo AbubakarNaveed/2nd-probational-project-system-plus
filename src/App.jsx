@@ -43,7 +43,7 @@ function App() {
       element: <AdminAuth />,
     },
     {
-      path: "/user-panel",
+      path: "/user-pannel",
       element: <Pannel />,
       children: [
         {

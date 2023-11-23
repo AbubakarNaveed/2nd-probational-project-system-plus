@@ -187,7 +187,7 @@ const AddNew = () => {
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
           <button
             style={{ backgroundColor: "transparent", border: 0 }}
-            onClick={() => navigate("/user-panel/companies")}
+            onClick={() => navigate("/user-pannel/companies")}
           >
             <img src={Back} />
           </button>

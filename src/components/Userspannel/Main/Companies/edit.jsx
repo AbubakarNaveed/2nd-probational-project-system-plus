@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Back from "@images/back.svg";
 import { useNavigate } from "react-router-dom";
 import DefaultAvatar from "@images/defaulAvartar.png";
@@ -6,15 +6,23 @@ import Input from "@components/Generals/input";
 import Button from "@components/Generals/button";
 import SearchIcon from "@images/Search.svg";
 import BlackAdd from "@images/addBlack.svg";
+import { useDispatch } from "react-redux";
+import { closeViewCompany } from "../../../../redux/Slices/statusSlice";
+
 const Edit = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const handleCloseViewCompany = () => dispatch(closeViewCompany());
+  useEffect(() => {
+    handleCloseViewCompany();
+  }, []);
   return (
     <div className="mainContainer">
       <div className="header logoHeader" style={{ alignItems: "center" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
           <button
             style={{ backgroundColor: "transparent", border: 0 }}
-            onClick={() => navigate("/user-panel/companies")}
+            onClick={() => navigate("/user-pannel/companies")}
           >
             <img src={Back} />
           </button>

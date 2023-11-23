@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Outlet, NavLink, Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { closeOffcanvas } from "../../../../redux/Slices/statusSlice";
 const index = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(closeOffcanvas());
+  }, []);
+
   return (
     <div className="mainContainer">
       <div className="headerWithNavs">
