@@ -7,11 +7,11 @@ import Plus from "@images/plus.svg";
 import UserPic from "@images/sidebarUser.png";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { linksData } from "./sidebarData";
+
 import { toggleSideBar } from "../../redux/Slices/statusSlice";
 import LogoMobile from "@images/logoMobile.png";
 
-const sidebar = ({ offcanvas }) => {
+const sidebar = ({ offcanvas, linksData }) => {
   const dispatch = useDispatch();
   const hide = useSelector((state) => state.status.sidebarToggle);
 

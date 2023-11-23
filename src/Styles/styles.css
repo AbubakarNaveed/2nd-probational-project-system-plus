@@ -36,7 +36,7 @@
   border-color: #fff;
 }
 
-@media only screen and (max-width: 588px) {
+@media only screen and (max-width: 949px) {
   .table thead {
     display: none;
   }

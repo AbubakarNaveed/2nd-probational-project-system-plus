@@ -15,7 +15,7 @@ import Settings from "@images/settings.svg";
 export const linksData = {
   Overview: [
     { id: 1, text: "Dashboard", icon: Dash, path: "/admin-pannel/dashboard" },
-    { id: 2, text: "Tasks", icon: Tasks, path: "/admin-pannel/tasks" },
+    { id: 2, text: "Users", icon: Driver, path: "/admin-pannel/users" },
     { id: 3, text: "Calendar", icon: Calendar, path: "/admin-pannel/calendar" },
     { id: 4, text: "Trips", icon: Trips, path: "/admin-pannel/trips" },
   ],
@@ -33,7 +33,7 @@ export const linksData = {
       path: "/admin-pannel/service-providers",
       text: "Service Provider",
     },
-    { id: 8, text: "Drivers", icon: Driver, path: "/admin-pannel/drivers" },
+
     { id: 9, text: "Vehicles", icon: Vehicles, path: "/admin-pannel/vehicles" },
   ],
   User: [
@@ -41,7 +41,7 @@ export const linksData = {
       id: 10,
       text: "Settings",
       icon: Settings,
-      path: "/admin-panel/settings/account",
+      path: "/admin-pannel/settings/account",
     },
   ],
 };

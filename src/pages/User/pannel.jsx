@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import TopBar from "@components/Generals/topBar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { openOffcanvas, closeOffcanvas } from "../../redux/Slices/statusSlice";
+import { linksData } from "@components/Generals/sidebarData";
 
 const Pannel = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const Pannel = () => {
           className={`col-${sidebarToggle ? "1" : "2"} p-0 d-none d-xl-block `}
           style={{ transition: "0.3s all ease-in-out" }}
         >
-          <Sidebar />
+          <Sidebar linksData={linksData} />
         </div>
         <div
           className={`col-xl-${sidebarToggle ? "11" : "10"} p-0 col-12`}
@@ -45,7 +46,7 @@ const Pannel = () => {
           <Offcanvas.Title></Offcanvas.Title>
         </Offcanvas.Header>
 
-        <Sidebar offcanvas={offCanvasShow} />
+        <Sidebar offcanvas={offCanvasShow} linksData={linksData} />
       </Offcanvas>
     </div>
   );
