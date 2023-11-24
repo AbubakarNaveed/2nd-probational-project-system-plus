@@ -1,3 +1,3 @@
 import CompanyModal from "./companyModal";
-
-export { CompanyModal };
+import AddCompanySuccessModal from "./addCompanySuccessModal";
+export { CompanyModal, AddCompanySuccessModal };
