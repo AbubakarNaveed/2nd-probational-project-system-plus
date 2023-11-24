@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Input from "@components/Generals/input";
 import Button from "@components/Generals/button";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <div className="loginWrapper row h-100 align-items-center w-100 justify-content-center ">
       <div className="loginHeader col-12 ">
@@ -53,6 +55,11 @@ const Login = () => {
             fontSize="18"
             color="primary"
             buttonSize={"lg"}
+            clickEvent={() =>
+              navigate("/user-pannel", {
+                replace: true,
+              })
+            }
           />
         </div>
         <div className="loginUtility2">

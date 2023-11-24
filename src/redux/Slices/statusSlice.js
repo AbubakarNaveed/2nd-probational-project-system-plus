@@ -3,6 +3,7 @@ const initialState = {
   sidebarToggle: false,
   offCanvasShow: false,
   viewCompany: false,
+  deleteCompany: false,
 };
 
 const StatusSlice = createSlice({
@@ -24,6 +25,12 @@ const StatusSlice = createSlice({
     closeViewCompany: (state) => {
       state.viewCompany = false;
     },
+    openDeleteCompany: (state) => {
+      state.deleteCompany = true;
+    },
+    closeDeleteCompany: (state) => {
+      state.deleteCompany = false;
+    },
   },
 });
 
@@ -33,5 +40,7 @@ export const {
   openOffcanvas,
   openViewCompany,
   closeViewCompany,
+  openDeleteCompany,
+  closeDeleteCompany,
 } = StatusSlice.actions;
 export default StatusSlice.reducer;

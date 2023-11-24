@@ -16,6 +16,12 @@ const Edit = () => {
   useEffect(() => {
     handleCloseViewCompany();
   }, []);
+  const handleEdit = () => {
+    navigate("/user-pannel/companies");
+  };
+  const handleCancel = () => {
+    navigate("/user-pannel/companies");
+  };
   return (
     <div className="mainContainer">
       <div className="header logoHeader" style={{ alignItems: "center" }}>
@@ -187,7 +193,11 @@ const Edit = () => {
             alignItems: "center",
           }}
         >
-          <button className="customUpload" style={{ width: "140px" }}>
+          <button
+            className="customUpload"
+            style={{ width: "140px" }}
+            onClick={() => handleCancel()}
+          >
             Cancel
           </button>
           <div style={{ width: "140px" }}>
@@ -196,6 +206,7 @@ const Edit = () => {
               buttonSize="sm"
               fontSize="14"
               fontColor={"#ffff"}
+              clickEvent={handleEdit}
             />
           </div>
         </div>

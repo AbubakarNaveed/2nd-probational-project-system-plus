@@ -4,7 +4,9 @@ import Key1 from "@images/Key.svg";
 import Key2 from "@images/Key2.svg";
 import Input from "@components/Generals/input";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const adminAuth = () => {
+  const navigate = useNavigate();
   return (
     <div className="container-lg" style={{ height: "100vh", width: "100vw" }}>
       <div
@@ -66,7 +68,13 @@ const adminAuth = () => {
                     </div>
                   </div>
                   <div className="loginButton">
-                    <button className="btn btn-primary" type="button">
+                    <button
+                      className="btn btn-primary"
+                      type="button"
+                      onClick={() =>
+                        navigate("/admin-pannel", { replace: true })
+                      }
+                    >
                       Login
                     </button>
                   </div>

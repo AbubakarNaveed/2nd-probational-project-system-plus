@@ -6,8 +6,15 @@ import Input from "@components/Generals/input";
 import Button from "@components/Generals/button";
 import SearchIcon from "@images/Search.svg";
 import BlackAdd from "@images/addBlack.svg";
+
 const AddNew = () => {
   const navigate = useNavigate();
+  const handleAddNewCompany = () => {
+    navigate("/user-pannel/companies");
+  };
+  const handleCancel = () => {
+    navigate("/user-pannel/companies");
+  };
   return (
     // <div className="mainContainer">
     //   <div className="header logoHeader" style={{ alignItems: "center" }}>
@@ -191,7 +198,7 @@ const AddNew = () => {
           >
             <img src={Back} />
           </button>
-          <h1 style={{ fontWeight: 600 }}>Edit Company</h1>
+          <h1 style={{ fontWeight: 600 }}>Add Company</h1>
         </div>
       </div>
       <div
@@ -226,7 +233,6 @@ const AddNew = () => {
               <div className=" col-12 p-0 row custom-gutter">
                 <Input
                   label={"Company Name *"}
-                  defaultValue={"Company ABC"}
                   type={"text"}
                   labelSize="md"
                   styles={"col-sm-6 p-0 col-12"}
@@ -352,15 +358,20 @@ const AddNew = () => {
             alignItems: "center",
           }}
         >
-          <button className="customUpload" style={{ width: "140px" }}>
+          <button
+            className="customUpload"
+            onClick={() => handleCancel()}
+            style={{ width: "140px" }}
+          >
             Cancel
           </button>
           <div style={{ width: "140px" }}>
             <Button
-              text={"Save Changes"}
+              text={"Add Company"}
               buttonSize="sm"
               fontSize="14"
               fontColor={"#ffff"}
+              clickEvent={handleAddNewCompany}
             />
           </div>
         </div>

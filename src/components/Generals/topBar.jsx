@@ -17,7 +17,6 @@ const TopBar = ({ canvasEvent }) => {
         style={{
           border: "1px #DCDEE6 solid",
           background: "#fff",
-
           padding: "4px",
           borderRadius: "4px",
         }}

@@ -1,9 +1,9 @@
 import TableAvatar from "@images/tableAvatar.png";
 
 export const companyDataRows = [
-  "Company Name",
-  "Contact",
-  "Tax registration number",
+  "COMPANY NAME",
+  "CONTACT",
+  "TAX REGISTRATION NUMBER",
   "",
 ];
 

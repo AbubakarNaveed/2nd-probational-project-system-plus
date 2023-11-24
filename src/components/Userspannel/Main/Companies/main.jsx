@@ -11,10 +11,13 @@ import Edit from "@images/edit.svg";
 import View from "@images/view.svg";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { CompanyModal } from "@components/Generals/Modal";
 import {
   closeOffcanvas,
   openViewCompany,
   closeViewCompany,
+  closeDeleteCompany,
+  openDeleteCompany,
 } from "../../../../redux/Slices/statusSlice";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import OffCanvasHeader from "./offcanvasComponents/Header";
@@ -24,12 +27,15 @@ const main = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const viewCompany = useSelector((state) => state.status.viewCompany);
+  const deleteCompanyModal = useSelector((state) => state.status.deleteCompany);
 
   const handleAddnew = () => {
     navigate("/user-pannel/companies/add_new", { replace: true });
   };
   const handleOpenCompanyView = () => dispatch(openViewCompany());
   const handleCloseViewCompany = () => dispatch(closeViewCompany());
+  const handleCloseDeleteModal = () => dispatch(closeDeleteCompany());
+  const handleOpenDeleteModal = () => dispatch(openDeleteCompany());
   useEffect(() => {
     dispatch(closeOffcanvas());
   }, []);
@@ -63,7 +69,7 @@ const main = () => {
       </div>
       <div className="mainBody mainBodyTable">
         <div className="tableBody" style={{ borderRadius: "8px" }}>
-          <table className="table rounded">
+          <table className=" table  table-hover ">
             <thead>
               <tr>
                 {companyDataRows.map((item, index) => (
@@ -179,7 +185,10 @@ const main = () => {
                       >
                         <img src={Edit} />
                       </button>
-                      <button style={{ background: "none", border: 0 }}>
+                      <button
+                        style={{ background: "none", border: 0 }}
+                        onClick={() => handleOpenDeleteModal()}
+                      >
                         <img src={Delete} />
                       </button>
                       <button
@@ -196,6 +205,10 @@ const main = () => {
           </table>
         </div>
       </div>
+      <CompanyModal
+        modalShow={deleteCompanyModal}
+        modalClose={handleCloseDeleteModal}
+      />
       <Offcanvas
         show={viewCompany}
         className={"offcanvas-width"}
